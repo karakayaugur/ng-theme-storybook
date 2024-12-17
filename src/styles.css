@@ -1,0 +1,12 @@
+@import url(./assets/styles/styles.css);
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: auto;
+  height: 100svh;
+}

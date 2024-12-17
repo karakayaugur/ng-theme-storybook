@@ -1,0 +1,111 @@
+:where(button) {
+  --text-color: var(--white);
+  --surface-color: var(--primary-color);
+  --surface-color-hover: var(--primary-color-hover);
+  --surface-color-active: var(--primary-color-hover);
+
+  --radius: 0.375rem;
+  --line-height: 1.5rem;
+  --font-size: var(--fs-base);
+  --transition: all 0.2s ease;
+  --height: 2.75rem;
+  --padding: 0.8125rem 1rem;
+  --font-face: "inter", sans-serif;
+  --font-weight: var(--fw-700, 700);
+}
+
+:where(button).primary {
+  --text-color: var(--white);
+  --surface-color: var(--primary-color);
+  --surface-color-hover: var(--primary-color-hover);
+  --surface-color-active: var(--primary-color-hover);
+}
+
+:where(button).secondary {
+  --text-color: var(--white);
+  --surface-color: var(--secondary-color);
+  --surface-color-hover: var(--secondary-color-hover);
+  --surface-color-active: var(--secondary-color-hover);
+}
+
+:host([color-scheme="dark"]) :where(button).primary {
+  --text-color: var(--white);
+  --surface-color: var(--primary-color);
+  --surface-color-hover: var(--primary-color-hover);
+  --surface-color-active: var(--primary-color-hover);
+}
+
+:host([color-scheme="dark"]) :where(button).secondary {
+  --text-color: var(--white);
+  --surface-color: var(--secondary-color);
+  --surface-color-hover: var(--secondary-color-hover);
+  --surface-color-active: var(--secondary-color-hover);
+}
+
+:where(button) {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  transition: var(--transition);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--fw-600, 600);
+  background-color: var(--surface-color);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  font-family: var(--font-face);
+  font-weight: var(--font-weight);
+  height: var(--height);
+}
+
+:where(button):hover:not(:disabled) {
+  background-color: var(--surface-color-hover);
+}
+
+:where(button):disabled:not(.loading) {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+:where(button).loading {
+  cursor: not-allowed;
+}
+
+:where(button):disabled {
+  cursor: not-allowed;
+}
+
+:where(button).block {
+  width: 100%;
+}
+
+:where(button).small {
+  --font-size: var(--fs-small);
+}
+:where(button).large {
+  --font-size: var(--fs-large, 1.125rem);
+}
+
+.button-loading {
+  border-left-color: var(--white);
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-left-color: var(--text-color);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

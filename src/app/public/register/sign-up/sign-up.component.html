@@ -1,0 +1,35 @@
+<app-container [fullHeight]="true">
+  <div style="display: grid; place-content: center">
+    <h1 class="primary mb-3">
+      {{ "Register Financial House Business" }}
+    </h1>
+    <p>
+      {{ "Single registration for all Financial House Business products." }}
+    </p>
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <app-input
+        [formControlName]="'email'"
+        [control]="form.get('email')"
+        [type]="'email'"
+        [name]="'email'"
+        [label]="'Your email address'"
+        [isDisabled]="loading"
+        class="mb-4"
+      ></app-input>
+      <app-button
+        [isDisabled]="form.invalid"
+        [loading]="loading"
+        color="secondary"
+        [label]="'Sign Up'"
+        >{{ "Sign Up" }}</app-button
+      >
+    </form>
+
+    <div class="register">
+      <span
+        >{{ "Have an account?" }} &nbsp;
+        <a [routerLink]="['/sign-in']">{{ "Sign in here." }}</a></span
+      >
+    </div>
+  </div>
+</app-container>

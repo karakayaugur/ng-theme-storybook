@@ -1,0 +1,158 @@
+:where([color-scheme="light"]) :where(h1),
+:where([color-scheme="light"]) :where(h2),
+:where([color-scheme="light"]) :where(h3),
+:where([color-scheme="light"]) :where(h4),
+:where([color-scheme="light"]) :where(h5),
+:where([color-scheme="light"]) :where(h6) {
+  --text-primary: var(--primary-color);
+  --text-secondary: var(--secondary-color);
+}
+
+:where([color-scheme="dark"]) :where(h1),
+:where([color-scheme="dark"]) :where(h2),
+:where([color-scheme="dark"]) :where(h3),
+:where([color-scheme="dark"]) :where(h4),
+:where([color-scheme="dark"]) :where(h5),
+:where([color-scheme="dark"]) :where(h6) {
+  --text-primary: var(--white);
+  --text-secondary: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  color: var(--gray-12);
+  font-weight: var(--fw-700);
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+h1.primary,
+h2.primary,
+h3.primary,
+h4.primary,
+h5.primary,
+h6.primary {
+  color: var(--text-primary);
+}
+
+h1.secondary,
+h2.secondary,
+h3.secondary,
+h4.secondary,
+h5.secondary,
+h6.secondary {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: calc(var(--fs-base) * 1.5);
+}
+h2 {
+  font-size: calc(var(--fs-base) * 1.25);
+}
+h3 {
+  font-size: calc(var(--fs-base) * 1.125);
+}
+h4 {
+  font-size: calc(var(--fs-base) * 1);
+}
+h5 {
+  font-size: calc(var(--fs-base) * 0.875);
+}
+h6 {
+  font-size: calc(var(--fs-base) * 0.75);
+}
+
+/* Paragraph */
+:where(p) {
+  --text-color: var(--gray-6);
+  --font-weight: var(--fw-400, 400);
+  --line-height: 1.5rem;
+  --font-size: var(--fs-small, 0.875rem);
+}
+
+:where([color-scheme="light"]) :where(p) {
+  --text-color: var(--gray-6);
+}
+
+:where([color-scheme="dark"]) :where(p) {
+  --text-color: var(--gray-6);
+}
+
+p {
+  font-style: normal;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  letter-spacing: -0.14px;
+}
+
+/*Link*/
+:where(a) {
+  --text-color: var(--text-color-1);
+  --font-face: var(--font-face);
+  --font-size: 0.8125rem;
+  --font-weight: var(--fw-600, 600);
+  --line-height: 0.875rem;
+  --cursor: pointer;
+}
+
+:where(a):hover {
+  color: var(--text-color);
+}
+
+:where([color-scheme="light"]) :where(a) {
+  --text-color: var(--text-color-1);
+}
+
+:where([color-scheme="dark"]) :where(a) {
+  --text-color: #1d679f;
+}
+
+a {
+  font-style: normal;
+  letter-spacing: -0.12px;
+  color: var(--text-color);
+  font-family: var(--font-face);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  cursor: var(--cursor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+/*span*/
+:where(span) {
+  --text-color: var(--gray-6);
+  --font-weight: var(--fw-500, 500);
+  --line-height: 0.875rem;
+  --font-size: 0.8125rem;
+}
+
+:where([color-scheme="light"]) :where(span) {
+  --text-color: var(--gray-6);
+}
+
+:where([color-scheme="dark"]) :where(span) {
+  --text-color: var(--gray-6);
+}
+
+span {
+  font-style: normal;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  letter-spacing: -0.14px;
+}

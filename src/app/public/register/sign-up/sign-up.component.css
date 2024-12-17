@@ -1,0 +1,16 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form > app-input {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.register {
+  margin-top: 0.5rem;
+}

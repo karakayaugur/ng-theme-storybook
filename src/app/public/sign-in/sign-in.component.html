@@ -1,0 +1,71 @@
+<app-container [fullHeight]="true">
+  <div style="display: grid; place-content: center">
+    <h1 class="primary mb-3">
+      {{ "Financial House Business" }}
+    </h1>
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+      <g transform="translate(0 -1016.362)">
+        <circle cx="18" cy="1034.362" r="18" fill="#3a6c87" />
+        <path
+          fill="#fff"
+          d="M15.957 6.5a.5.5 0 0 0-.271.1l-2.508 1.88H8.504v3.504l-1.8 1.35a.5.5 0 0 0-.183.531.5.5 0 0 0-.017.143V25a.5.5 0 0 0 .5.5h18a.5.5 0 0 0 .5-.5V14.008a.5.5 0 0 0-.041-.205.5.5 0 0 0-.193-.48l-.344-.257c.352-.635.57-1.356.57-2.132 0-2.442-1.983-4.434-4.42-4.434-1.23 0-2.344.51-3.146 1.328L16.285 6.6a.5.5 0 0 0-.328-.1Zm5.12 1c.933 0 1.776.375 2.392.98h-.008c.01.01.025.014.035.024l.008.01c.613.62.992 1.473.992 2.42a3.418 3.418 0 0 1-3.42 3.431 3.42 3.42 0 0 1-3.422-3.431A3.42 3.42 0 0 1 21.076 7.5Zm-5.089.125 1.143.855h-2.283zm5.08 1.043a.5.5 0 0 0-.492.508v1.258h-1.258c-.676-.01-.676 1.01 0 1h1.258v1.257c-.01.677 1.01.677 1 0v-1.257h1.258c.676.01.676-1.01 0-1h-1.258V9.176a.5.5 0 0 0-.508-.508zM9.504 9.48h7.414c-.11.316-.18.646-.217.989h-4.197v1.062h4.21c.047.336.122.661.24.969h-5.45v1.063h6.033c.266.357.58.673.94.937h-4.973v1.063h5v-1.04a4.378 4.378 0 0 0 2.572.842c.13 0 .252-.028.38-.039l-5.47 3.418-6.482-4.04zm-1 3.754v.846l-.615-.383zm16 1.37v9.468l-5.217-3.484c-.489-.282-1.066.537-.555.832l4.612 3.08H8.654l4.62-3.08c.512-.296.068-1.192-.555-.832l-5.215 3.478v-9.431l1.236.77 6.893 4.296.086.055.037.023h.002a.5.5 0 0 0 .451 0h.01l7.037-4.396.012-.008h.002z"
+          color="#000"
+          font-family="sans-serif"
+          font-weight="400"
+          overflow="visible"
+          transform="translate(1.996 1017.862)"
+          style="
+            line-height: normal;
+            text-indent: 0;
+            text-align: start;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-decoration-color: #000;
+            text-transform: none;
+            block-progression: tb;
+            isolation: auto;
+            mix-blend-mode: normal;
+          "
+        />
+      </g>
+    </svg>
+    <p>
+      {{
+        "Welcome back! Please enter your credentials to access your account."
+      }}
+    </p>
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <app-input
+        [formControlName]="'username'"
+        [control]="form.get('username')"
+        [type]="'email'"
+        [name]="'username'"
+        [label]="'Your email address'"
+        [isDisabled]="loading"
+        class="mb-4"
+      ></app-input>
+      <app-input-password
+        [formControlName]="'password'"
+        [control]="form.get('password')"
+        [name]="'password'"
+        [label]="'Your password'"
+        [isDisabled]="loading"
+        class="mb-4"
+      ></app-input-password>
+
+      <app-button
+        [isDisabled]="form.invalid"
+        [loading]="loading"
+        [label]="'Sign In'"
+        color="secondary"
+      ></app-button>
+    </form>
+
+    <div class="register">
+      <span
+        >{{ "Don’t have an account?" }} &nbsp;
+        <a href="" [routerLink]="['/sign-up']">{{ "Signup here." }}</a></span
+      >
+    </div>
+  </div>
+</app-container>

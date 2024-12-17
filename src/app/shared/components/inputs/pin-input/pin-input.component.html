@@ -1,0 +1,59 @@
+<div class="container">
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 0)"
+    (keydown)="onKeydown($event, 0)"
+    (paste)="onPaste($event)"
+    autofocus
+    inputmode="numeric"
+  />
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 1)"
+    (keydown)="onKeydown($event, 1)"
+    inputmode="numeric"
+  />
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 2)"
+    (keydown)="onKeydown($event, 2)"
+    inputmode="numeric"
+  />
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 3)"
+    (keydown)="onKeydown($event, 3)"
+    inputmode="numeric"
+  />
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 4)"
+    (keydown)="onKeydown($event, 4)"
+    inputmode="numeric"
+  />
+  <input
+    #inputs
+    type="text"
+    maxlength="1"
+    pattern="\d"
+    (input)="onInput($event, 5)"
+    (keydown)="onKeydown($event, 5)"
+    inputmode="numeric"
+  />
+  <div class="inputs"></div>
+</div>
