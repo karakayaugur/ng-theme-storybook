@@ -4,7 +4,7 @@
 /node_modules
 node_modules
 newrelic_agent.log
-
+dist
 # IDEs and editors
 /.idea
 .project
