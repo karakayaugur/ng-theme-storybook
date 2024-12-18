@@ -1,0 +1,51 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation container */
+nav {
+  background: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;
+}
+
+/* Navigation list */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation items */
+nav ul li {
+  margin: 0 15px;
+}
+
+/* Navigation links */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Responsive menu for smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+}
