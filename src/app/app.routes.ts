@@ -1,34 +1,10 @@
-import { Routes } from '@angular/router';
-import {
-  SignInComponent,
-  SignUpComponent,
-  VerifyEmailComponent,
-  CreatePasswordComponent,
-} from '@app/public/index';
-
-import { OtpComponent } from '@app/public/otp/otp.component';
+import { Routes } from "@angular/router";
+import { HomeComponent } from "@app/pages/home/home.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
+  { path: "", redirectTo: "home", pathMatch: "full" },
   {
-    path: 'sign-in',
-    component: SignInComponent,
-    data: {},
+    path: "home",
+    component: HomeComponent,
   },
-  {
-    path: 'sign-up',
-    component: SignUpComponent,
-    data: {},
-  },
-  {
-    path: 'verify-email',
-    component: VerifyEmailComponent,
-    data: {},
-  },
-  {
-    path: 'create-password/:uuid',
-    component: CreatePasswordComponent,
-    data: {},
-  },
-  { path: 'otp', component: OtpComponent },
 ];
