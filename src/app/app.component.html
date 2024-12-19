@@ -1,5 +1,6 @@
+<app-theme-toggle></app-theme-toggle>
 <main class="main">
-  <svg
+  <!-- <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 982 239"
     fill="none"
@@ -43,9 +44,8 @@
       </linearGradient>
       <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
     </defs>
-  </svg>
+  </svg> -->
   <h1>Hello, {{ title }}</h1>
+  <app-nav-menu></app-nav-menu>
+  <router-outlet />
 </main>
-
-<app-nav-menu></app-nav-menu>
-<router-outlet />
