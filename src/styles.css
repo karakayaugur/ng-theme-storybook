@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+:where(html) {
+  --font-size-fluid-1: clamp(2.5rem, 7vw, 3rem);
+  --font-size-fluid-2: clamp(2rem, 6vw, 2.5rem);
+  --font-size-fluid-3: clamp(1.75rem, 4.5vw, 2rem);
+  --font-size-fluid-4: clamp(1.25rem, 3.5vw, 1.5rem);
+}
+
+:where(html) {
+  --fs-base: 1rem;
+}
+
+:where(html) {
+  --gray-0: #f8f9fa;
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #495057;
+  --gray-8: #343a40;
+  --gray-9: #212529;
+  --gray-10: #16191d;
+  --gray-11: #0d0f12;
+  --gray-12: #030507;
+
+  --white: 0 0% 100%;
+}
+
+html {
+  --font-face: "Manrope", sans-serif;
+
+  --text-1-light: var(--gray-8);
+  --text-2-light: var(--gray-7);
+  --surface-1-light: var(--gray-0);
+  --surface-2-light: var(--gray-1);
+  --surface-3-light: var(--gray-2);
+  --surface-4-light: var(--gray-3);
+  /* --surface-shadow-light: var(--gray-8-hsl);
+  --shadow-strength-light: 2%; */
+
+  --text-1-dark: var(--gray-3);
+  --text-2-dark: var(--gray-5);
+  --surface-1-dark: var(--gray-12);
+  --surface-2-dark: var(--gray-11);
+  --surface-3-dark: var(--gray-10);
+  --surface-4-dark: var(--gray-9);
+  /* --surface-shadow-dark: var(--gray-12);
+  --shadow-strength-dark: 80%; */
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+  --text-1: var(--text-1-light);
+  --text-2: var(--text-2-light);
+
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --surface-3: var(--surface-3-light);
+  --surface-4: var(--surface-4-light);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+  --text-1: var(--text-1-dark);
+  --text-2: var(--text-2-dark);
+
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --surface-3: var(--surface-3-dark);
+  --surface-4: var(--surface-4-dark);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-1);
+  font-size: var(--fs-base);
+  font-weight: 400;
+  font-family: var(--font-face);
+  background-color: var(--surface-1);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: var(--font-size-fluid-1);
+}
+h2 {
+  font-size: var(--font-size-fluid-2);
+}
+h3 {
+  font-size: var(--font-size-fluid-3);
+}
+h4 {
+  font-size: var(--font-size-fluid-4);
+}
+
+:where(html) {
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+  --ease-out-3: cubic-bezier(0, 0, 0.3, 1);
+  --ease-elastic-out-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+}
+
+[color-scheme="light"] #sun {
+  transform: scale(0.5);
+}
+
+[color-scheme="light"] #sun-beams {
+  transform: rotate(0.25turn);
+  --_opacity-dur: 0.5s;
+}
+
+#sun {
+  transition: transform 0.5s var(--ease-4);
+  transform-origin: center center;
+}
+
+#sun-beams {
+  --_opacity-dur: 0.15s;
+  stroke: var(--text-1);
+  stroke-width: 2px;
+  transform-origin: center center;
+  transition: transform 0.5s var(--ease-elastic-out-4),
+    opacity var(--_opacity-dur) var(--ease-3);
+}
+
+:hover > svg > #sun-beams {
+  stroke: var(--text-2);
+}
+
+[color-scheme="light"] #sun-beams {
+  transform: rotate(0.25turn);
+  --_opacity-dur: 0.5s;
+}
+
+[color-scheme="dark"] #sun-beams {
+  opacity: 0;
+}
+
+#moon,
+#sun {
+  fill: var(--text-1);
+  stroke: none;
+}
+
+#moon > circle {
+  transition: transform 0.5s var(--ease-out-3);
+}
+
+[color-scheme="light"] #sun-beams {
+  transform: rotate(0.25turn);
+  --_opacity-dur: 0.5s;
+}
+
+[color-scheme="dark"] #moon > circle {
+  transform: translate(-20px);
+}
