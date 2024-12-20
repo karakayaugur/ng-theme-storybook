@@ -8,17 +8,13 @@ import { CommonModule } from "@angular/common";
 })
 export class ButtonComponent {
   constructor() {}
-  @Input() isDisabled: boolean = false;
-  @Input() loading: boolean = true;
-  @Input() color: "default" | "primary" | "secondary" | "danger" | "success" =
-    "default";
-  @Input() size: "default" | "small" | "large" = "default";
-  @Input() block: boolean = true;
-  @Input() label: string = "Button";
-  @Input() radius: string = "0.375rem";
-  @Input() type: "button" | "submit" | "reset" = "button";
-  @Input() fontFace: "Inter" | "Manrope" | "Nunito" | "Raleway" = "Inter";
   @Output() onClick = new EventEmitter<any>();
+
+  @Input() isDisabled: boolean = false;
+  @Input() loading: boolean = false;
+  @Input() variant: "default" | "primary" | "warning" | "danger" | "success" =
+    "default";
+  @Input() size: "" | "x-small" | "small" | "large" = "";
 
   handleClick(event: any) {
     this.onClick.emit(event);

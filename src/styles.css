@@ -1,3 +1,13 @@
+@import "reset-css/reset.css";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype-variations");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
 :where(html) {
   --font-size-fluid-1: clamp(2.5rem, 7vw, 3rem);
   --font-size-fluid-2: clamp(2rem, 6vw, 2.5rem);
@@ -7,6 +17,7 @@
 
 :where(html) {
   --fs-base: 1rem;
+  --font-face: "Inter", sans-serif;
 }
 
 :where(html) {
@@ -36,6 +47,7 @@ html {
   --surface-2-light: var(--gray-1);
   --surface-3-light: var(--gray-2);
   --surface-4-light: var(--gray-3);
+
   /* --surface-shadow-light: var(--gray-8-hsl);
   --shadow-strength-light: 2%; */
 
@@ -47,6 +59,16 @@ html {
   --surface-4-dark: var(--gray-9);
   /* --surface-shadow-dark: var(--gray-12);
   --shadow-strength-dark: 80%; */
+
+  --brand-color: #ea2127;
+  --brand-color-active: #ed474d;
+  --primary-color: var(--brand-color);
+  --primary-color-active: var(--brand-color-active);
+  --success-color: #4caf50;
+  --success-color-active: #62ae64;
+  --warning-color: #ff9800;
+  --warning-color-active: #f4a530;
+  --white: #ffffff;
 }
 
 [color-scheme="light"] {
@@ -110,6 +132,23 @@ h4 {
 [color-scheme="light"] #sun-beams {
   transform: rotate(0.25turn);
   --_opacity-dur: 0.5s;
+}
+
+pre.language-html {
+  background-color: var(--surface-3-dark);
+  border-radius: calc(var(--fs-base) / 2);
+  padding: calc(var(--fs-base));
+  margin-left: 20px;
+}
+
+pre.language-html .element {
+  color: var(--primary-color);
+}
+pre.language-html .attribute {
+  color: var(--success-color);
+}
+pre.language-html .value {
+  color: var(--warning-color);
 }
 
 #sun {
