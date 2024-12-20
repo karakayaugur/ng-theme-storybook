@@ -1,35 +1,31 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CommonModule } from "@angular/common";
+import { Component, Input, forwardRef } from "@angular/core";
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
-    selector: 'app-input',
-    imports: [CommonModule],
-    templateUrl: './input.component.html',
-    styleUrl: './input.component.css',
-    providers: [
-        {
-            provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => InputComponent),
-            multi: true,
-        },
-    ]
+  selector: "app-input",
+  imports: [CommonModule],
+  templateUrl: "./input.component.html",
+  styleUrl: "./input.component.css",
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true,
+    },
+  ],
 })
 export class InputComponent implements ControlValueAccessor {
-  @Input() type: 'email' | 'text' | 'number' | 'password' = 'text';
-  @Input() name: string = '';
+  @Input() type: "email" | "text" | "number" | "password" = "text";
+  @Input() name: string = "";
   @Input() label?: string = undefined;
   @Input() placeholder?: string = undefined;
-  @Input() autocomplete: string = 'off';
+  @Input() autocomplete: string = "off";
   @Input() required: boolean = false;
   @Input() isDisabled: boolean = false;
-  @Input() control: any;
   @Input() uppercase: boolean = false;
-  @Input() endIcon?: string = undefined;
 
   value: any;
-  isPasswordVisible = false;
-  // isDisabled: boolean = false;
 
   private onChange = (value: any) => {};
 
@@ -53,14 +49,5 @@ export class InputComponent implements ControlValueAccessor {
 
     this.onChange(this.value);
     this.onTouched();
-  }
-
-  setDisabledState(isDisabled: boolean): void {
-    this.isDisabled = isDisabled;
-  }
-
-  togglePasswordVisibility(): void {
-    this.isPasswordVisible = !this.isPasswordVisible;
-    // this.type = this.isPasswordVisible ? 'text' : 'password';
   }
 }
