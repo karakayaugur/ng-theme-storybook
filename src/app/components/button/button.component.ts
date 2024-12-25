@@ -14,7 +14,7 @@ export class ButtonComponent {
   @Input() loading: boolean = false;
   @Input() variant: "default" | "primary" | "warning" | "danger" | "success" =
     "default";
-  @Input() size: "" | "x-small" | "small" | "large" = "";
+  @Input() size: "" | "x-small" | "small" | "large" | "x-large" = "";
 
   handleClick(event: any) {
     this.onClick.emit(event);

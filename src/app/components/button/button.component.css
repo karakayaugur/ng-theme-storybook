@@ -96,7 +96,9 @@
 :where(button).large {
   --font-size: var(--fs-base, 1rem);
 }
-
+:where(button).x-large {
+  --font-size: calc(var(--fs-base) * 1.125);
+}
 .button-loading {
   border-left-color: var(--white);
   display: inline-block;
