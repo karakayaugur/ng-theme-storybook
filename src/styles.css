@@ -60,10 +60,12 @@ html {
   /* --surface-shadow-dark: var(--gray-12);
   --shadow-strength-dark: 80%; */
 
-  --brand-color: #ea2127;
-  --brand-color-active: #ed474d;
+  --brand-color: #2c73d2;
+  --brand-color-active: #043f8b;
   --primary-color: var(--brand-color);
   --primary-color-active: var(--brand-color-active);
+  --danger-color: #ea2127;
+  --danger-color-active: #c9060d;
   --success-color: #4caf50;
   --success-color-active: #62ae64;
   --warning-color: #ff9800;
