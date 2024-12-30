@@ -26,6 +26,12 @@
   --bg-color-active: var(--warning-color-active);
 }
 
+:where(button).danger {
+  --text-color: var(--white);
+  --bg-color: var(--danger-color);
+  --bg-color-active: var(--danger-color-active);
+}
+
 /* :host([color-scheme="dark"]) :where(button).primary {
   --text-color: var(--white);
   --surface-color: var(--primary-color);
