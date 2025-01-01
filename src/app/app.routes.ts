@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { HomeComponent, ButtonsComponent } from "@app/pages";
+import { HomeComponent, ButtonsComponent, InputsComponent } from "@app/pages";
 
 export const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -10,5 +10,9 @@ export const routes: Routes = [
   {
     path: "buttons",
     component: ButtonsComponent,
+  },
+  {
+    path: "inputs",
+    component: InputsComponent,
   },
 ];
