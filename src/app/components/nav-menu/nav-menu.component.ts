@@ -12,6 +12,5 @@ export class NavMenuComponent {
     { title: "Home", url: "/home" },
     { title: "Button", url: "/buttons" },
     { title: "Input", url: "/inputs" },
-    { title: "Radio", url: "/radio" },
   ];
 }

@@ -1,3 +1,9 @@
+<label for="{{ name }}">
+  {{ label || name }}
+  @if (required) {
+  <span>*</span>
+  }
+</label>
 <input
   [id]="name"
   [name]="name"
