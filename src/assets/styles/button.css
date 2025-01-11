@@ -1,0 +1,127 @@
+:where(button) {
+  --text-color: var(--text-1);
+  --bg-color: var(--surface-4);
+  --bg-color-active: var(--surface-4);
+  --font-size: calc(var(--fs-base) * 0.875);
+  --padding: calc(1em * 0.5) calc(1em * 1);
+  --border-radius: 0.25rem;
+  --font-weight: 500;
+}
+
+:where(button).primary {
+  --text-color: var(--white);
+  --bg-color: var(--primary-color);
+  --bg-color-active: var(--primary-color-active);
+}
+
+:where(button).success {
+  --text-color: var(--white);
+  --bg-color: var(--success-color);
+  --bg-color-active: var(--success-color-active);
+}
+
+:where(button).warning {
+  --text-color: var(--white);
+  --bg-color: var(--warning-color);
+  --bg-color-active: var(--warning-color-active);
+}
+
+:where(button).danger {
+  --text-color: var(--white);
+  --bg-color: var(--danger-color);
+  --bg-color-active: var(--danger-color-active);
+}
+
+:where(button) {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight);
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+:where(button):before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--bg-color-active);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
+:where(button):hover {
+  background-color: var(--bg-color-active);
+}
+
+:where(button):disabled:not(.loading) {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+:where(button).loading {
+  cursor: not-allowed;
+}
+
+:where(button):disabled {
+  cursor: not-allowed;
+}
+:where(button).x-small {
+  --font-size: calc(var(--fs-base) * 0.65);
+}
+:where(button).small {
+  --font-size: calc(var(--fs-base) * 0.75);
+}
+:where(button).large {
+  --font-size: var(--fs-base, 1rem);
+}
+:where(button).x-large {
+  --font-size: calc(var(--fs-base) * 1.125);
+}
+.button-loading {
+  border-left-color: var(--white);
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes fade-in-bloom {
+  0% {
+    opacity: 0;
+    filter: brightness(1) blur(20px);
+  }
+  10% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-left-color: var(--text-color);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
