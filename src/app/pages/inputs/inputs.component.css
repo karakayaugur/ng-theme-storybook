@@ -1,0 +1,14 @@
+section {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+h3 {
+  margin: 0;
+}

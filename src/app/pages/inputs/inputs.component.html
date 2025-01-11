@@ -1,4 +1,20 @@
-<section style="display: grid; gap: 1rem">
-  <h3>Inputs</h3>
-  <app-input></app-input>
+<section>
+  <h3>{{ "Types" }}</h3>
+  <div class="flex">
+    <app-input
+      [type]="'email'"
+      label="Email"
+      placeholder="Input Type Email"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      label="Text"
+      placeholder="Input Type Text"
+    ></app-input>
+    <app-input
+      [type]="'number'"
+      label="Number"
+      placeholder="Input Type Text"
+    ></app-input>
+  </div>
 </section>
