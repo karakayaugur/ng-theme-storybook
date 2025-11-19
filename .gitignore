@@ -38,3 +38,6 @@ testem.log
 .DS_Store
 Thumbs.db  
 .angular/cache/20.3.10/storybook/.tsbuildinfo
+
+*storybook.log
+storybook-static
