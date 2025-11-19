@@ -6,7 +6,6 @@ import {
   CurrencyPipe,
   DATE_PIPE_DEFAULT_OPTIONS,
   DATE_PIPE_DEFAULT_TIMEZONE,
-  DOCUMENT,
   DatePipe,
   DecimalPipe,
   DomAdapter,
@@ -94,10 +93,12 @@ import {
   provideNetlifyLoader,
   registerLocaleData,
   setRootDomAdapter
-} from "./chunk-PF7QABWO.js";
+} from "./chunk-ZQKJ3SUE.js";
 import {
+  DOCUMENT,
   IMAGE_CONFIG
-} from "./chunk-YNK7CL7V.js";
+} from "./chunk-ZWWAXIYQ.js";
+import "./chunk-WDMUDEB6.js";
 export {
   APP_BASE_HREF,
   AsyncPipe,
@@ -197,4 +198,3 @@ export {
   parseCookieValue as ɵparseCookieValue,
   setRootDomAdapter as ɵsetRootDomAdapter
 };
-//# sourceMappingURL=@angular_common.js.map
