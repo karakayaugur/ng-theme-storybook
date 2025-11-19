@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/app.component.css"],
-  "sourcesContent": ["h1 {\n  font-size: 3.125rem;\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family: \"Inter Tight\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n    Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n    \"Segoe UI Symbol\";\n}\n\np {\n  margin: 0;\n  color: var(--gray-700);\n}\n\nmain {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n\n.angular-logo {\n  max-width: 9.2rem;\n}\n\nh1 {\n  margin-top: 1.75rem;\n}\n"],
-  "mappings": ";AAAA;AACE,aAAW;AACX,eAAa;AACb,eAAa;AACb,kBAAgB;AAChB,UAAQ;AACR;AAAA,IAAa,aAAa;AAAA,IAAE,aAAa;AAAA,IAAE,kBAAkB;AAAA,IAAE,UAAU;AAAA,IACvE,MAAM;AAAA,IAAE,SAAS;AAAA,IAAE,KAAK;AAAA,IAAE,UAAU;AAAA,IAAE,mBAAmB;AAAA,IAAE,gBAAgB;AAAA,IAC3E;AACJ;AAEA;AACE,UAAQ;AACR,SAAO,IAAI;AACb;AAEA;AACE,SAAO;AACP,cAAY;AACZ,WAAS;AACT,mBAAiB;AACjB,kBAAgB;AAChB,eAAa;AACb,WAAS;AACT,cAAY;AACZ,YAAU;AACZ;AAEA,CAAC;AACC,aAAW;AACb;AAEA;AACE,cAAY;AACd;",
-  "names": []
-}
