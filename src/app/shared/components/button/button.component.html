@@ -1,0 +1,7 @@
+<button [class]="classes" [disabled]="isDisabled || isLoading" (click)="clicked.emit($event)">
+  @if(!isLoading) {
+  <ng-content></ng-content>
+  } @else {
+  <span class="loader"></span>
+  }
+</button>
