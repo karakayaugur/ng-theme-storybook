@@ -1,0 +1,24 @@
+:root {
+  --clr-black: hsl(0 0% 0%);
+  --clr-white: hsl(0 0% 100%);
+
+  --clr-primary-400: hsl(262, 80%, 60%);
+  --clr-primary-500: hsl(262, 80%, 50%);
+  --clr-primary-600: hsl(262, 80%, 40%);
+
+  --clr-gray-400: hsl(0, 0%, 30%);
+  --clr-gray-500: hsl(0, 0%, 20%);
+  --clr-gray-600: hsl(0, 0%, 10%);
+
+  --clr-danger-400: hsl(356, 90%, 55%);
+  --clr-danger-500: hsl(356, 90%, 50%);
+  --clr-danger-600: hsl(356, 90%, 45%);
+
+  --clr-success-400: hsl(88, 50%, 55%);
+  --clr-success-500: hsl(88, 50%, 50%);
+  --clr-success-600: hsl(88, 50%, 45%);
+
+  --clr-warning-400: hsl(30, 90%, 55%);
+  --clr-warning-500: hsl(30, 90%, 50%);
+  --clr-warning-600: hsl(30, 90%, 45%);
+}
