@@ -1,14 +1,18 @@
-import type { Preview } from '@storybook/angular';
+import type { Preview, AngularRenderer } from '@storybook/angular';
+
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
+  decorators: [
+    withThemeByDataAttribute<AngularRenderer>({
+      themes: {
+        light: 'light',
+        dark: 'dark',
       },
-    },
-  },
+      defaultTheme: 'light',
+      attributeName: 'color-scheme',
+    }),
+  ],
 };
 
 export default preview;

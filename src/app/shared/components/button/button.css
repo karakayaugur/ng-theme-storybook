@@ -33,6 +33,10 @@ button {
   gap: 0.5rem;
 }
 
+:host-context([color-scheme='dark']) button {
+  --clr-background: var(--clr-gray-300);
+}
+
 /* Variant */
 button.primary {
   --clr-background: var(--clr-primary-500);

@@ -1,10 +1,3 @@
-@import url('../public/styles/reset.css');
-@import url('../public/styles/fonts.css');
-@import url('../public/styles/props.css');
-@import url('../public/styles/typography.css');
-@import url('../public/styles/helper.css');
-@import url('../public/styles/animations.css');
-
 :root {
   --_opacity-dur: 0.5s; /* opacity geçiş süresi */
   --ease-3: ease-in-out;

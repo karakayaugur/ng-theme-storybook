@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button';
+import { themes } from 'storybook/theming';
+import { componentWrapperDecorator } from '@storybook/angular';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Button',
   component: ButtonComponent,
+  decorators: [componentWrapperDecorator((story) => `<div style="margin: 1em;">${story}</div>`)],
   args: {
     variant: 'default',
     size: 'medium',
@@ -29,37 +32,15 @@ export default meta;
 
 type Story = StoryObj<ButtonComponent>;
 
-export const Default: Story = {
+export const Button: Story = {
   args: {
     variant: 'default',
-    label: 'Default Button',
+    label: 'Button',
   },
 };
 
-export const Primary: Story = {
-  args: {
-    variant: 'primary',
-    label: 'Primary Button',
-  },
-};
-
-export const Danger: Story = {
-  args: {
-    variant: 'danger',
-    label: 'Danger Button',
-  },
-};
-
-export const Success: Story = {
-  args: {
-    variant: 'success',
-    label: 'Success Button',
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    variant: 'warning',
-    label: 'Warning Button',
+export const onMobile: Story = {
+  globals: {
+    viewport: { value: 'mobile1', isRotated: false },
   },
 };

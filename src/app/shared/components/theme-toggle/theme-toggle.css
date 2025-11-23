@@ -2,9 +2,17 @@
   transform: scale(0.5);
 }
 
-:host-context([color-scheme='light']) #sun-beams {
+:host-context([color-scheme='light']) #sun-dots {
   transform: rotate(0.25turn);
   --_opacity-dur: 0.5s;
+}
+
+:host-context([color-scheme='dark']) #moon > circle {
+  transform: translate(-20px);
+}
+
+:host-context([color-scheme='dark']) #sun-dots {
+  opacity: 0;
 }
 
 #sun {
@@ -12,16 +20,12 @@
   transform-origin: center center;
 }
 
-#sun-beams {
+#sun-dots {
   --_opacity-dur: 0.15s;
   stroke: var(--clr-text);
   stroke-width: 2px;
   transform-origin: center center;
   transition: transform 0.5s var(--ease-elastic-out-4), opacity var(--_opacity-dur) var(--ease-3);
-}
-
-:host-context([color-scheme='dark']) #sun-beams {
-  opacity: 0;
 }
 
 #moon,
@@ -34,6 +38,15 @@
   transition: transform 0.5s var(--ease-out-3);
 }
 
-:host-context([color-scheme='dark']) #moon > circle {
-  transform: translate(-20px);
+button {
+  border: none;
+  background-color: transparent;
+  fill: none;
+  stroke: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  :hover {
+    cursor: pointer;
+  }
 }
