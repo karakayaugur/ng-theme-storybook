@@ -1,5 +1,6 @@
+import { ThemeToggleComponent } from '@shared/components/theme-toggle/theme-toggle';
 import { ButtonComponent } from './components/button/button';
 
-export { ButtonComponent };
+export { ButtonComponent, ThemeToggleComponent };
 
-export const SharedUi = [ButtonComponent];
+export const SharedUi = [ButtonComponent, ThemeToggleComponent];

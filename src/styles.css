@@ -3,6 +3,39 @@
 @import url('../public/styles/props.css');
 @import url('../public/styles/typography.css');
 @import url('../public/styles/helper.css');
+@import url('../public/styles/animations.css');
+
+:root {
+  --_opacity-dur: 0.5s; /* opacity geçiş süresi */
+  --ease-3: ease-in-out;
+  --ease-elastic-out-4: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* transform easing */
+}
+
+html {
+  --font-face: 'Manrope', sans-serif;
+
+  --text-light: var(--gray-7);
+  --surface-light: var(--gray-0);
+
+  --text-dark: var(--gray-3);
+  --surface-dark: var(--gray-12);
+
+  --brand-color: var(--clr-primary-500);
+}
+
+[color-scheme='light'] {
+  color-scheme: light;
+  --clr-text: var(--text-light);
+  --clr-surface: var(--surface-light);
+  animation: bg-fade-light 0.25s var(--ease-3) both;
+}
+
+[color-scheme='dark'] {
+  color-scheme: dark;
+  --clr-text: var(--text-dark);
+  --clr-surface: var(--surface-dark);
+  animation: bg-fade-dark 0.25s var(--ease-3) both;
+}
 
 :where(html) {
   --fs-base: 1rem;
@@ -16,3 +49,5 @@ body {
   font-weight: 400;
   line-height: 1.5;
 }
+
+/*Theme Toggle*/
