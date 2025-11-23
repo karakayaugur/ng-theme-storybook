@@ -1,8 +1,8 @@
-@import url('public/styles/fonts.css');
-@import url('public/styles/reset.css');
-@import url('public/styles/props.css');
-@import url('public/styles/typography.css');
-@import url('public/styles/helper.css');
+@import url('../public/styles/reset.css');
+@import url('../public/styles/fonts.css');
+@import url('../public/styles/props.css');
+@import url('../public/styles/typography.css');
+@import url('../public/styles/helper.css');
 
 :where(html) {
   --fs-base: 1rem;
