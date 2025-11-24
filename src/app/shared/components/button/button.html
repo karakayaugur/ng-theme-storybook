@@ -1,8 +1,9 @@
 <button [ngClass]="getClass()" [ngStyle]="style" [disabled]="isDisabled || loading">
   @if(loading) {
   <span class="spinner"></span>
-  Loading... } @else {
-  {{ label }}
   }
-  <ng-content></ng-content>
+  <span class="label">
+    {{ label }}
+    <ng-content></ng-content>
+  </span>
 </button>

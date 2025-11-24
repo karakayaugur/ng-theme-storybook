@@ -1,9 +1,10 @@
 :where(button) {
   --padding: 0 calc(1rem * 1.5);
   --clr-background: var(--clr-gray-500);
+  --clr-disabled: var(--clr-gray-200);
   --clr-text: var(--clr-white);
   --font-size: 1rem;
-  --font-weight: 400;
+  --font-weight: 500;
   --line-height: 1.5;
   --height: 2.5rem;
   --border: none;
@@ -12,6 +13,7 @@
   --cursor: pointer;
   --width: auto;
   --font-face: var(--font-family-body);
+  --position: relative;
 }
 
 button {
@@ -29,6 +31,7 @@ button {
   padding: var(--padding);
   width: var(--width);
   height: var(--height);
+  position: var(--position);
   transition: all 200ms;
   gap: 0.5rem;
 }
@@ -37,47 +40,34 @@ button {
   --clr-background: var(--clr-gray-300);
 }
 
-/* Variant */
 button.primary {
   --clr-background: var(--clr-primary-500);
 }
+
 button.warning {
   --clr-background: var(--clr-warning-500);
 }
-button.danger {
-  --clr-background: var(--clr-danger-500);
-}
-button.success {
-  --clr-background: var(--clr-success-500);
-}
 
-/* Hover */
+button.destructive {
+  --clr-background: var(--clr-destructive-500);
+}
 
 .button:hover {
   text-decoration: none;
 }
 
 button.default:hover {
-  --clr-background: var(--clr-gray-600);
+  --clr-background: var(--clr-gray-700);
 }
 
 button.primary:hover {
-  --clr-background: var(--clr-primary-600);
+  --clr-background: var(--clr-primary-700);
 }
 
-button.warning:hover {
-  --clr-background: var(--clr-warning-600);
+button.destructive:hover {
+  --clr-background: var(--clr-destruction-700);
 }
 
-button.danger:hover {
-  --clr-background: var(--clr-danger-600);
-}
-
-button.success:hover {
-  --clr-background: var(--clr-success-600);
-}
-
-/* size */
 button.small {
   --padding: 0 calc(1rem * 1.25);
   --height: 2.25rem;
@@ -92,16 +82,29 @@ button.full-width {
   --width: 100%;
 }
 
-/* loading */
+button:disabled {
+  background-color: var(--clr-disabled);
+  cursor: not-allowed;
+}
+
+button.primary:disabled {
+  background-color: var(--clr-primary-300);
+}
+
+button.destructive:disabled {
+  background-color: var(--clr-destructive-300);
+}
 
 .spinner {
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-top: 2px solid var(--clr-white);
   border-radius: 50%;
   width: 1em;
   height: 1em;
   animation: spin 0.6s linear infinite;
   display: inline-block;
+  position: absolute;
+  transform: translate(50% - 50%);
 }
 
 @keyframes spin {

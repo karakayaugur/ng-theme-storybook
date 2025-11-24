@@ -1,14 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button';
-import { themes } from 'storybook/theming';
-import { componentWrapperDecorator } from '@storybook/angular';
 
 const meta: Meta<ButtonComponent> = {
-  title: 'Button',
+  title: 'Design System/Components/Button',
   component: ButtonComponent,
-  decorators: [componentWrapperDecorator((story) => `<div style="margin: 1em;">${story}</div>`)],
   args: {
-    variant: 'default',
+    variant: 'primary',
     size: 'medium',
     isDisabled: false,
     loading: false,
@@ -17,7 +14,7 @@ const meta: Meta<ButtonComponent> = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['default', 'primary', 'warning', 'danger', 'success'],
+      options: ['default', 'primary', 'destructive'],
     },
     size: {
       control: { type: 'select' },
@@ -32,15 +29,28 @@ export default meta;
 
 type Story = StoryObj<ButtonComponent>;
 
-export const Button: Story = {
-  args: {
-    variant: 'default',
-    label: 'Button',
-  },
+export const Primary: StoryObj<ButtonComponent> = {
+  render: (args) => ({
+    props: { args },
+    template: `
+      <div style="display: flex; gap: 1rem;">
+        <app-button [label]="args.label" [variant]="'primary'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+        <app-button [label]="args.label" [variant]="'primary'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+        <app-button [label]="args.label" [variant]="'primary'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+      </div>
+    `,
+  }),
 };
 
-export const onMobile: Story = {
-  globals: {
-    viewport: { value: 'mobile1', isRotated: false },
-  },
+export const Destructive: StoryObj<ButtonComponent> = {
+  render: (args) => ({
+    props: { args },
+    template: `
+      <div style="display: flex; gap: 1rem;">
+        <app-button [label]="args.label" [variant]="'destructive'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+        <app-button [label]="args.label" [variant]="'destructive'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+        <app-button [label]="args.label" [variant]="'destructive'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
+      </div>
+    `,
+  }),
 };
