@@ -16,6 +16,12 @@
   --position: relative;
 }
 
+:where(button).iconed {
+  --height: 2.5rem;
+  --width: 2.5rem;
+  --padding: 0;
+}
+
 button {
   font-family: var(--font-face);
   align-items: center;
@@ -114,4 +120,28 @@ button.destructive:disabled {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Icon Button */
+.button.button-icon {
+  --height: 2.5rem;
+  --width: 2.5rem;
+  --padding: 0 !important;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.button.small.button-icon {
+  --height: 2.25rem;
+  --width: 2.25rem;
+}
+
+.button.large.button-icon {
+  --height: 2.75rem;
+  --width: 2.75rem;
+}
+
+.button.button-icon > .label {
+  display: none;
 }
