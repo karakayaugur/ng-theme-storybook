@@ -1,4 +1,4 @@
-button {
+:where(button) {
   --padding: 0 calc(1rem * 1.5);
   --clr-background: var(--clr-gray-500);
   --clr-text: var(--clr-white);
@@ -33,7 +33,7 @@ button {
   gap: 0.5rem;
 }
 
-:host-context([color-scheme='dark']) button {
+:host-context([color-scheme='dark']) button.default {
   --clr-background: var(--clr-gray-300);
 }
 

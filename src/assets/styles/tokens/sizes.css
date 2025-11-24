@@ -1,0 +1,4 @@
+/* Font Size */
+:where(html) {
+  --fs-base: 16px;
+}

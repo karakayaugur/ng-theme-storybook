@@ -1,17 +1,13 @@
-:root {
-  --_opacity-dur: 0.5s; /* opacity geçiş süresi */
-  --ease-3: ease-in-out;
-  --ease-elastic-out-4: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* transform easing */
-}
+@import url('./assets/styles/index.css');
 
 html {
   --font-face: 'Manrope', sans-serif;
 
-  --text-light: var(--gray-7);
-  --surface-light: var(--gray-0);
+  --text-light: var(--clr-gray-7);
+  --surface-light: var(--clr-gray-0);
 
-  --text-dark: var(--gray-3);
-  --surface-dark: var(--gray-12);
+  --text-dark: var(--clr-gray-3);
+  --surface-dark: var(--clr-gray-12);
 
   --brand-color: var(--clr-primary-500);
 }
@@ -28,10 +24,6 @@ html {
   --clr-text: var(--text-dark);
   --clr-surface: var(--surface-dark);
   animation: bg-fade-dark 0.25s var(--ease-3) both;
-}
-
-:where(html) {
-  --fs-base: 1rem;
 }
 
 html,

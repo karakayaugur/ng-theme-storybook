@@ -1,0 +1,38 @@
+:where(:root) {
+  --clr-black: hsl(0 0% 0%);
+  --clr-white: hsl(0 0% 100%);
+
+  --clr-primary-100: #c8cefc;
+  --clr-primary-200: #aeb6fb;
+  --clr-primary-300: #8895f9;
+  --clr-primary-400: #7181f8;
+  --clr-primary-50: #edeffe;
+  --clr-primary-500: #4e61f6;
+  --clr-primary-600: #4758e0;
+  --clr-primary-700: #3745af;
+  --clr-primary-800: #2b3587;
+  --clr-primary-900: #212967;
+
+  --clr-gray-50: #f8f9fa;
+  --clr-gray-100: #f1f3f5;
+  --clr-gray-200: #e9ecef;
+  --clr-gray-300: #dee2e6;
+  --clr-gray-400: #ced4da;
+  --clr-gray-500: #adb5bd;
+  --clr-gray-600: #868e96;
+  --clr-gray-700: #495057;
+  --clr-gray-800: #343a40;
+  --clr-gray-900: #212529;
+
+  --clr-danger-400: hsl(356, 90%, 55%);
+  --clr-danger-500: hsl(356, 90%, 50%);
+  --clr-danger-600: hsl(356, 90%, 45%);
+
+  --clr-success-400: hsl(88, 50%, 55%);
+  --clr-success-500: hsl(88, 50%, 50%);
+  --clr-success-600: hsl(88, 50%, 45%);
+
+  --clr-warning-400: hsl(30, 90%, 55%);
+  --clr-warning-500: hsl(30, 90%, 50%);
+  --clr-warning-600: hsl(30, 90%, 45%);
+}
