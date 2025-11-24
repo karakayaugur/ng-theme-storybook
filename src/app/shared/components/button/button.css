@@ -1,7 +1,7 @@
 :where(button) {
   --padding: 0 calc(1rem * 1.5);
-  --clr-background: var(--clr-gray-500);
-  --clr-disabled: var(--clr-gray-200);
+  --clr-background: var(--clr-neutral-700);
+  --clr-disabled: var(--clr-neutral-500);
   --clr-text: var(--clr-white);
   --font-size: 1rem;
   --font-weight: 500;
@@ -12,7 +12,7 @@
   --outline: none;
   --cursor: pointer;
   --width: auto;
-  --font-face: var(--font-family-body);
+  --font-face: var(--font-family);
   --position: relative;
 }
 
@@ -43,11 +43,11 @@ button {
 }
 
 :host-context([color-scheme='dark']) button.default {
-  --clr-background: var(--clr-gray-300);
+  --clr-background: var(--clr-neutral-300);
 }
 
 button.primary {
-  --clr-background: var(--clr-primary-500);
+  --clr-background: var(--clr-brand-500);
 }
 
 button.warning {
@@ -63,15 +63,15 @@ button.destructive {
 }
 
 button.default:hover {
-  --clr-background: var(--clr-gray-700);
+  --clr-background: var(--clr-neutral-800);
 }
 
 button.primary:hover {
-  --clr-background: var(--clr-primary-700);
+  --clr-background: var(--clr-brand-700);
 }
 
 button.destructive:hover {
-  --clr-background: var(--clr-destruction-700);
+  --clr-background: var(--clr-destructive-700);
 }
 
 button.small {
@@ -94,7 +94,7 @@ button:disabled {
 }
 
 button.primary:disabled {
-  background-color: var(--clr-primary-300);
+  background-color: var(--clr-brand-300);
 }
 
 button.destructive:disabled {
@@ -127,9 +127,6 @@ button.destructive:disabled {
   --height: 2.5rem;
   --width: 2.5rem;
   --padding: 0 !important;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .button.small.button-icon {
