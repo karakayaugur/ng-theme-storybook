@@ -1,6 +1,11 @@
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 60px;
-  background-color: var(--clr-neutral-300);
+}
+
+.brand-img {
+  width: 30px;
 }
