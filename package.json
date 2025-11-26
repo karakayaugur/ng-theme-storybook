@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run ng-storybook:storybook",
-    "build-storybook": "ng run ng-storybook:build-storybook"
+    "build-storybook": "ng run ng-storybook:build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_8ea09cc762ef7a0"
   },
   "prettier": {
     "printWidth": 100,
@@ -44,6 +45,7 @@
     "@storybook/angular": "^10.0.8",
     "@storybook/test-runner": "^0.24.1",
     "@types/jasmine": "~5.1.0",
+    "chromatic": "^13.3.4",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

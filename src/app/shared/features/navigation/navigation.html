@@ -1,0 +1,7 @@
+<nav role="navigation" aria-label="Main navigation">
+  @for (item of navigation; track item.url ?? $index) {
+  <a class="nav-link" [routerLink]="[item.url]" routerLinkActive="active">
+    {{ item.label | capitalize }}
+  </a>
+  }
+</nav>

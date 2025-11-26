@@ -40,30 +40,6 @@ export const Default: StoryObj<ButtonComponent> = {
         <app-button [label]="args.label" [variant]="'default'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
         <app-button [label]="args.label" [variant]="'default'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
       </div>
-
-
-      <h5>Icon</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'default'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'default'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.loading"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'default'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-      </div>
-      
-
-      <h5>Loading</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'default'" [size]="'small'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'default'" [size]="'medium'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'default'" [size]="'large'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-      </div>
-
-
-      <h5>Disabled</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'default'" [size]="'small'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'default'" [size]="'medium'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'default'" [size]="'large'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
-      </div>
     `,
   }),
 };
@@ -79,28 +55,6 @@ export const Primary: StoryObj<ButtonComponent> = {
         <app-button [label]="args.label" [variant]="'primary'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
         <app-button [label]="args.label" [variant]="'primary'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
       </div>
-
-
-      <h5>Icon</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'primary'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'primary'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.loading"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'primary'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-      </div>
-
-
-      <h5>Loading</h5>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'small'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'medium'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'large'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-      </div>
-      <h5>Disabled</h5>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'small'" [loading]="args.isDisabled" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'medium'" [loading]="args.isDisabled" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'primary'" [size]="'large'" [loading]="args.isDisabled" [isDisabled]="'true'"></app-button>
-      </div>
     `,
   }),
 };
@@ -115,30 +69,6 @@ export const Destructive: StoryObj<ButtonComponent> = {
         <app-button [label]="args.label" [variant]="'destructive'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
         <app-button [label]="args.label" [variant]="'destructive'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
         <app-button [label]="args.label" [variant]="'destructive'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.isDisabled"></app-button>
-      </div>
-
-
-      <h5>Icon</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'destructive'" [size]="'small'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'destructive'" [size]="'medium'" [loading]="args.loading" [isDisabled]="args.loading"></app-button>
-        <app-button [class]="'button-icon'" [label]="args.label" [variant]="'destructive'" [size]="'large'" [loading]="args.loading" [isDisabled]="args.disabled"></app-button>
-      </div>
-      
-
-      <h5>Loading</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'small'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'medium'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'large'" [loading]="'loading'" [isDisabled]="args.isDisabled"></app-button>
-      </div>
-
-
-      <h5>Disabled</h5>
-      <div style="display: flex; gap: 1rem; margin-bottom:1rem">
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'small'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'medium'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
-        <app-button [label]="args.label" [variant]="'destructive'" [size]="'large'" [loading]="args.loading" [isDisabled]="'true'"></app-button>
       </div>
     `,
   }),

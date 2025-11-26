@@ -16,12 +16,6 @@
   --position: relative;
 }
 
-:where(button).iconed {
-  --height: 2.5rem;
-  --width: 2.5rem;
-  --padding: 0;
-}
-
 button {
   font-family: var(--font-face);
   align-items: center;
@@ -47,7 +41,7 @@ button {
 }
 
 button.primary {
-  --clr-background: var(--clr-brand-500);
+  --clr-background: var(--clr-brand-600);
 }
 
 button.warning {
@@ -67,7 +61,7 @@ button.default:hover {
 }
 
 button.primary:hover {
-  --clr-background: var(--clr-brand-700);
+  --clr-background: var(--clr-brand-800);
 }
 
 button.destructive:hover {
@@ -103,8 +97,8 @@ button.destructive:disabled {
 }
 
 .spinner {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-top: 2px solid var(--clr-white);
+  border: 2px solid var(--clr-brand-800);
+  border-top: 2px solid var(--clr-brand-300);
   border-radius: 50%;
   width: 1em;
   height: 1em;
@@ -112,25 +106,4 @@ button.destructive:disabled {
   display: inline-block;
   position: absolute;
   transform: translate(50% - 50%);
-}
-
-/* Icon Button */
-.button.button-icon {
-  --height: 2.5rem;
-  --width: 2.5rem;
-  --padding: 0 !important;
-}
-
-.button.small.button-icon {
-  --height: 2.25rem;
-  --width: 2.25rem;
-}
-
-.button.large.button-icon {
-  --height: 2.75rem;
-  --width: 2.75rem;
-}
-
-.button.button-icon > .label {
-  display: none;
 }

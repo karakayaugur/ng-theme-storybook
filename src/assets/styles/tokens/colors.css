@@ -16,18 +16,29 @@
   --clr-brand-900: #21084b;
   --clr-brand-950: #150531;
 
-  --clr-neutral-050: hsl(210 17% 95%);
-  --clr-neutral-050: hsl(210 16% 93%);
-  --clr-neutral-100: hsl(210 14% 89%);
-  --clr-neutral-200: hsl(210 14% 83%);
-  --clr-neutral-300: hsl(210 11% 71%);
-  --clr-neutral-400: hsl(210 7% 56%);
-  --clr-neutral-500: hsl(210 9% 31%);
-  --clr-neutral-600: hsl(210 10% 23%);
-  --clr-neutral-700: hsl(210 11% 15%);
-  --clr-neutral-800: hsl(214 14% 10%);
-  --clr-neutral-900: hsl(216 16% 6%);
-  --clr-neutral-950: hsl(210 40% 2%);
+  --clr-neutral-050: hsl(0 0% 98%);
+  --clr-neutral-100: hsl(0 0% 96.1%);
+  --clr-neutral-200: hsl(0 0% 89.8%);
+  --clr-neutral-300: hsl(0 0% 83.1%);
+  --clr-neutral-400: hsl(0 0% 63.9%);
+  --clr-neutral-500: hsl(0 0% 45.1%);
+  --clr-neutral-600: hsl(0 0% 32.2%);
+  --clr-neutral-700: hsl(0 0% 25.1%);
+  --clr-neutral-800: hsl(0 0% 14.9%);
+  --clr-neutral-900: hsl(0 0% 9%);
+  --clr-neutral-950: hsl(0 0% 3.9%);
+
+  --clr-gray-50: hsl(210 20% 98%);
+  --clr-gray-100: hsl(220 14% 96%);
+  --clr-gray-200: hsl(220 13% 91%);
+  --clr-gray-300: hsl(216 12% 84%);
+  --clr-gray-400: hsl(218 11% 65%);
+  --clr-gray-500: hsl(220 9% 46%);
+  --clr-gray-600: hsl(215 14% 34%);
+  --clr-gray-700: hsl(217 19% 27%);
+  --clr-gray-800: hsl(215 28% 17%);
+  --clr-gray-900: hsl(216 34% 12%);
+  --clr-gray-950: hsl(205 41% 8%);
 
   --clr-destructive-050: #fff5f5;
   --clr-destructive-100: #fbeaea;
