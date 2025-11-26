@@ -1,0 +1,6 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background-color: var(--clr-neutral-300);
+}

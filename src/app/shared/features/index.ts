@@ -1,3 +1,3 @@
-import { NavigationComponent } from '@shared/features/navigation/navigation.component';
+import { NavigationComponent } from '@app/shared/features/navigation/navigation';
 
 export { NavigationComponent };

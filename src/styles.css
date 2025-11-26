@@ -8,8 +8,7 @@ html {
 
   --clr-text-body-dark: var(--clr-neutral-300);
   --clr-text-title-dark: var(--clr-neutral-100);
-  --clr-surface-dark: var(--clr-neutral-950);
-
+  --clr-surface-dark: var(--clr-neutral-800);
   --brand-color: var(--clr-brand-600);
 }
 
@@ -18,7 +17,6 @@ html {
   --clr-text: var(--clr-text-body-light);
   --clr-text-title: var(--clr-text-title-light);
   --clr-surface: var(--clr-surface-light);
-  animation: bg-fade-light 0.25s var(--ease-3) both;
 }
 
 [color-scheme='dark'] {
@@ -26,7 +24,6 @@ html {
   --clr-text: var(--clr-text-body-dark);
   --clr-text-title: var(--clr-text-title-dark);
   --clr-surface: var(--clr-surface-dark);
-  animation: bg-fade-dark 0.25s var(--ease-3) both;
 }
 
 html,
