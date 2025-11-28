@@ -1,19 +1,22 @@
 :where(button) {
-  --padding: 0 calc(1rem * 1.5);
-  --clr-background: var(--clr-neutral-700);
-  --clr-disabled: var(--clr-neutral-500);
-  --clr-text: var(--clr-white);
+  --padding: 0.75rem 1.5rem;
+  --height: 3rem;
   --font-size: 1rem;
   --font-weight: 500;
   --line-height: 1.5;
-  --height: 2.5rem;
   --border: none;
   --border-radius: 6px;
   --outline: none;
   --cursor: pointer;
   --width: auto;
   --font-face: var(--font-family);
+  --clr-background: var(--clr-slate-700);
+  --clr-text: var(--clr-slate-100);
   --position: relative;
+  --gap: 0.5rem;
+  --transition: background-color 150ms ease, color 150ms ease, transform 100ms ease,
+    filter 100ms ease;
+  --opacity: 1;
 }
 
 button {
@@ -27,83 +30,129 @@ button {
   font-weight: var(--font-weight);
   outline: var(--outline);
   cursor: var(--cursor);
-  display: inline-flex;
   padding: var(--padding);
   width: var(--width);
   height: var(--height);
+  gap: var(--gap);
+  display: inline-flex;
   position: var(--position);
-  transition: all 200ms;
-  gap: 0.5rem;
+  transition: var(--transition);
+  opacity: var(--opacity);
 }
 
-:host-context([color-scheme='dark']) button.default {
-  --clr-background: var(--clr-neutral-300);
+button:active:not(:disabled):not(.loading) {
+  transform: scale(0.98);
+  filter: brightness(0.95);
 }
 
+/* Default */
+button.default:hover {
+  --clr-background: var(--clr-slate-800);
+}
+
+button:disabled {
+  --clr-background: var(--clr-slate-400);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+button:disabled:hover {
+  --clr-background: var(--clr-slate-400);
+  cursor: not-allowed;
+}
+
+button.loading {
+  cursor: not-allowed;
+  --clr-text: transparent;
+  --opacity: 0.7;
+}
+
+button.loading:hover {
+  --clr-background: var(--clr-slate-700);
+}
+
+/* Primary */
 button.primary {
   --clr-background: var(--clr-brand-600);
 }
-
-button.warning {
-  --clr-background: var(--clr-warning-500);
-}
-
-button.destructive {
-  --clr-background: var(--clr-destructive-500);
-}
-
-.button:hover {
-  text-decoration: none;
-}
-
-button.default:hover {
-  --clr-background: var(--clr-neutral-800);
-}
-
 button.primary:hover {
-  --clr-background: var(--clr-brand-800);
+  --clr-background: var(--clr-brand-700);
 }
 
+button.primary:disabled {
+  --clr-background: var(--clr-brand-400);
+  cursor: not-allowed;
+}
+
+button.primary:disabled:hover {
+  --clr-background: var(--clr-brand-400);
+}
+
+button.primary.loading:hover {
+  --clr-background: var(--clr-brand-600);
+}
+
+/* Destructive */
+button.destructive {
+  --clr-background: var(--clr-destructive-600);
+}
 button.destructive:hover {
   --clr-background: var(--clr-destructive-700);
 }
 
+button.destructive:disabled {
+  --clr-background: var(--clr-destructive-300);
+  cursor: not-allowed;
+}
+
+button.destructive:disabled:hover {
+  --clr-background: var(--clr-destructive-300);
+}
+
+button.destructive.loading:hover {
+  --clr-background: var(--clr-destructive-600);
+}
+
+/* Size */
 button.small {
-  --padding: 0 calc(1rem * 1.25);
-  --height: 2.25rem;
+  --height: 2.75rem;
+  --padding: 0.625rem 1.25rem;
 }
 
 button.large {
-  --height: 2.75rem;
-  --padding: 0 calc(1rem * 1.75);
+  --height: 3.25rem;
+  --padding: 0.875rem 1.75rem;
 }
 
 button.full-width {
   --width: 100%;
 }
 
-button:disabled {
-  background-color: var(--clr-disabled);
-  cursor: not-allowed;
-}
-
-button.primary:disabled,
-button.primary.loading {
-  --clr-disabled: var(--clr-brand-300);
-}
-
-button.destructive:disabled {
-  background-color: var(--clr-destructive-300);
-}
-
 .spinner {
-  border: 2px solid var(--clr-brand-800);
-  border-top: 2px solid var(--clr-brand-300);
-  border-radius: 50%;
-  width: 1em;
-  height: 1em;
+  border: 2px solid var(--clr-slate-500);
+  border-top: 2px solid var(--clr-slate-200);
   animation: var(--animation-spin);
-  display: inline-block;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
   position: absolute;
-  transform: translate(50% - 50%);
+}
+
+/* :focus-visible */
+button.default:focus-visible {
+  outline: 2px solid var(--clr-slate-400);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--clr-slate-100);
+}
+
+button.primary:focus-visible {
+  outline: 2px solid var(--clr-brand-300);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--clr-brand-100);
+}
+
+button.destructive:focus-visible {
+  outline: 2px solid var(--clr-destructive-300);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--clr-destructive-100);
 }

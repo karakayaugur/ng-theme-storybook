@@ -1,4 +1,8 @@
 :where(html) {
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+  --ease-out-3: cubic-bezier(0, 0, 0.3, 1);
+  --ease-elastic-out-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
   --animation-scale-up: scale-up 0.5s var(--ease-3);
   --animation-scale-down: scale-down 0.5s var(--ease-3);
   --animation-slide-out-up: slide-out-up 0.5s var(--ease-3);
@@ -16,6 +20,24 @@
   --animation-blink: blink 1s var(--ease-out-3) infinite;
   --animation-pulse: pulse 2s var(--ease-out-3) infinite;
   --animation-float: float 3s var(--ease-in-out-3) infinite;
+}
+
+@keyframes bg-fade-light {
+  from {
+    background-color: var(--surface-dark);
+  }
+  to {
+    background-color: var(--surface-light);
+  }
+}
+
+@keyframes bg-fade-dark {
+  from {
+    background-color: var(--surface-light);
+  }
+  to {
+    background-color: var(--surface-dark);
+  }
 }
 
 @keyframes scale-up {

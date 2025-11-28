@@ -17,13 +17,20 @@ export class ButtonComponent {
   @Input() class?: string | string[];
   @Input() style?: { [key: string]: string };
   @Input() label?: string;
+  @Input() fullWidth?: boolean = false;
 
   handleClick(event: any) {
     this.onClick.emit(event);
   }
 
   getClass(): string[] {
-    const baseClasses = ['button', this.variant, this.size];
+    const baseClasses = [
+      'button',
+      this.variant,
+      this.size,
+      this.loading ? 'loading' : '',
+      this.fullWidth ? 'full-width' : '',
+    ];
     if (!this.class) return baseClasses;
     return Array.isArray(this.class)
       ? [...baseClasses, ...this.class]

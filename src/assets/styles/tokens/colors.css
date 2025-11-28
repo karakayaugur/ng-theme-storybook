@@ -1,16 +1,16 @@
-:where(:root) {
+:root {
   --clr-black: hsl(0 0% 0%);
   --clr-white: hsl(0 0% 100%);
 }
 
-:where(:root) {
+:root {
   --clr-brand-050: #f6f2fe;
   --clr-brand-100: #ece3fc;
   --clr-brand-200: #e2d4fa;
   --clr-brand-300: #d6c3f8;
   --clr-brand-400: #b28df3;
   --clr-brand-500: #9461ee;
-  --clr-brand-600: #7533e9; /* primary */
+  --clr-brand-600: #7533e9;
   --clr-brand-700: #5215bd;
   --clr-brand-800: #300c6e;
   --clr-brand-900: #21084b;
@@ -28,24 +28,24 @@
   --clr-neutral-900: hsl(0 0% 9%);
   --clr-neutral-950: hsl(0 0% 3.9%);
 
-  --clr-gray-50: hsl(210 20% 98%);
-  --clr-gray-100: hsl(220 14% 96%);
-  --clr-gray-200: hsl(220 13% 91%);
-  --clr-gray-300: hsl(216 12% 84%);
-  --clr-gray-400: hsl(218 11% 65%);
-  --clr-gray-500: hsl(220 9% 46%);
-  --clr-gray-600: hsl(215 14% 34%);
-  --clr-gray-700: hsl(217 19% 27%);
-  --clr-gray-800: hsl(215 28% 17%);
-  --clr-gray-900: hsl(216 34% 12%);
-  --clr-gray-950: hsl(205 41% 8%);
+  --clr-slate-050: hsl(210, 20%, 96%);
+  --clr-slate-100: hsl(215, 18%, 91%);
+  --clr-slate-200: hsl(215, 15%, 84%);
+  --clr-slate-300: hsl(215, 13%, 76%);
+  --clr-slate-400: hsl(217, 12%, 67%);
+  --clr-slate-500: hsl(217, 10%, 59%);
+  --clr-slate-600: hsl(217, 10%, 50%);
+  --clr-slate-700: hsl(217, 11%, 41%);
+  --clr-slate-800: hsl(218, 12%, 33%);
+  --clr-slate-900: hsl(220, 13%, 25%);
+  --clr-slate-950: hsl(220, 14%, 15%);
 
   --clr-destructive-050: #fff5f5;
   --clr-destructive-100: #fbeaea;
   --clr-destructive-200: #f5c6c7;
   --clr-destructive-300: #ed9a9d;
   --clr-destructive-400: #e5484d;
-  --clr-destructive-500: #d13439; /* primary error */
+  --clr-destructive-500: #d13439;
   --clr-destructive-600: #c12025;
   --clr-destructive-700: #a11a1e;
   --clr-destructive-800: #7b1316;

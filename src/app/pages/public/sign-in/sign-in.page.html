@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <h2>Sign In Page to Admin UI</h2>
   <p style="margin-bottom: 2rem">Welcome back! Please enter your details</p>
   <form [formGroup]="form">
@@ -20,4 +20,164 @@
       >Sign In</app-button
     >
   </form>
+</section> -->
+
+<section style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <div
+    style="
+      display: flex;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <div style="display: grid; gap: 1rem">
+      <app-button [size]="'small'">Default</app-button>
+      <app-button [size]="'medium'">Default</app-button>
+      <app-button [size]="'large'">Default</app-button>
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [size]="'small'" [loading]="true">Default</app-button>
+      <app-button [size]="'medium'" [loading]="true">Default</app-button>
+      <app-button [size]="'large'" [loading]="true">Default</app-button>
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [isDisabled]="true" [size]="'small'">Default</app-button>
+      <app-button [isDisabled]="true" [size]="'medium'">Default</app-button>
+      <app-button [isDisabled]="true" [size]="'large'">Default</app-button>
+    </div>
+  </div>
+
+  <div
+    style="
+      display: grid;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <app-button [fullWidth]="true" [size]="'small'">Default</app-button>
+    <app-button [fullWidth]="true" [size]="'medium'" [loading]="true">Default</app-button>
+    <app-button [fullWidth]="true" [size]="'large'" [isDisabled]="true">Default</app-button>
+  </div>
+</section>
+
+<section style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <div
+    style="
+      display: flex;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'primary'" [size]="'small'">primary</app-button>
+      <app-button [variant]="'primary'" [size]="'medium'">primary</app-button>
+      <app-button [variant]="'primary'" [size]="'large'">primary</app-button>
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'primary'" [size]="'small'" [loading]="true">primary</app-button>
+      <app-button [variant]="'primary'" [size]="'medium'" [loading]="true">primary</app-button>
+      <app-button [variant]="'primary'" [size]="'large'" [loading]="true">primary</app-button>
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'primary'" [isDisabled]="true" [size]="'small'">primary</app-button>
+      <app-button [variant]="'primary'" [isDisabled]="true" [size]="'medium'">primary</app-button>
+      <app-button [variant]="'primary'" [isDisabled]="true" [size]="'large'">primary</app-button>
+    </div>
+  </div>
+
+  <div
+    style="
+      display: grid;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <app-button [variant]="'primary'" [fullWidth]="true" [size]="'small'">primary</app-button>
+    <app-button [variant]="'primary'" [fullWidth]="true" [size]="'medium'" [loading]="true"
+      >primary</app-button
+    >
+    <app-button [variant]="'primary'" [fullWidth]="true" [size]="'large'" [isDisabled]="true"
+      >primary</app-button
+    >
+  </div>
+</section>
+
+<section style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <div
+    style="
+      display: flex;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'destructive'" [size]="'small'">destructive</app-button>
+      <app-button [variant]="'destructive'" [size]="'medium'">destructive</app-button>
+      <app-button [variant]="'destructive'" [size]="'large'">destructive</app-button>
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'destructive'" [size]="'small'" [loading]="true"
+        >destructive</app-button
+      >
+      <app-button [variant]="'destructive'" [size]="'medium'" [loading]="true"
+        >destructive</app-button
+      >
+      <app-button [variant]="'destructive'" [size]="'large'" [loading]="true"
+        >destructive</app-button
+      >
+    </div>
+
+    <div style="display: grid; gap: 1rem">
+      <app-button [variant]="'destructive'" [isDisabled]="true" [size]="'small'"
+        >destructive</app-button
+      >
+      <app-button [variant]="'destructive'" [isDisabled]="true" [size]="'medium'"
+        >destructive</app-button
+      >
+      <app-button [variant]="'destructive'" [isDisabled]="true" [size]="'large'"
+        >destructive</app-button
+      >
+    </div>
+  </div>
+
+  <div
+    style="
+      display: grid;
+      gap: 1rem;
+      border: 1px solid var(--clr-neutral-300);
+      padding: 1rem;
+      border-radius: 1rem;
+      flex: 1 1 50%;
+    "
+  >
+    <app-button [variant]="'destructive'" [fullWidth]="true" [size]="'small'"
+      >destructive</app-button
+    >
+    <app-button [variant]="'destructive'" [fullWidth]="true" [size]="'medium'" [loading]="true"
+      >destructive</app-button
+    >
+    <app-button [variant]="'destructive'" [fullWidth]="true" [size]="'large'" [isDisabled]="true"
+      >destructive</app-button
+    >
+  </div>
 </section>
