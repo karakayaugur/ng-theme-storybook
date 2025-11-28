@@ -10,8 +10,8 @@
   --cursor: pointer;
   --width: auto;
   --font-face: var(--font-family);
-  --clr-background: var(--clr-slate-700);
-  --clr-text: var(--clr-slate-100);
+  --clr-background: var(--clr-neutral-700);
+  --clr-text: var(--clr-neutral-100);
   --position: relative;
   --gap: 0.5rem;
   --transition: background-color 150ms ease, color 150ms ease, transform 100ms ease,
@@ -48,17 +48,17 @@ button:active:not(:disabled):not(.loading) {
 
 /* Default */
 button.default:hover {
-  --clr-background: var(--clr-slate-800);
+  --clr-background: var(--clr-neutral-800);
 }
 
 button:disabled {
-  --clr-background: var(--clr-slate-400);
+  --clr-background: var(--clr-neutral-400);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 button:disabled:hover {
-  --clr-background: var(--clr-slate-400);
+  --clr-background: var(--clr-neutral-400);
   cursor: not-allowed;
 }
 
@@ -69,7 +69,7 @@ button.loading {
 }
 
 button.loading:hover {
-  --clr-background: var(--clr-slate-700);
+  --clr-background: var(--clr-neutral-700);
 }
 
 /* Primary */
@@ -130,8 +130,8 @@ button.full-width {
 }
 
 .spinner {
-  border: 2px solid var(--clr-slate-500);
-  border-top: 2px solid var(--clr-slate-200);
+  border: 2px solid var(--clr-neutral-500);
+  border-top: 2px solid var(--clr-neutral-200);
   animation: var(--animation-spin);
   border-radius: 50%;
   width: 1.25em;
@@ -141,9 +141,9 @@ button.full-width {
 
 /* :focus-visible */
 button.default:focus-visible {
-  outline: 2px solid var(--clr-slate-400);
+  outline: 2px solid var(--clr-neutral-400);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--clr-slate-100);
+  box-shadow: 0 0 0 3px var(--clr-neutral-100);
 }
 
 button.primary:focus-visible {

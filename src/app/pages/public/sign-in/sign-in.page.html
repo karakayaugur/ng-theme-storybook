@@ -1,7 +1,7 @@
-<div class="flex flex-place-center">
+<div class="container">
   <div class="card">
-    <h2>Sign In Page to Admin UI</h2>
-    <p style="margin-bottom: 2rem">Welcome back! Please enter your details</p>
+    <h4>Sign In Page to Admin UI</h4>
+    <p>Welcome back! Please enter your details</p>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <app-input
         label="Email"
@@ -17,17 +17,12 @@
         placeholder="Enter your password"
       ></app-input>
 
-      <app-button
-        [isDisabled]="form.invalid"
-        [fullWidth]="true"
-        [loading]="loading()"
-        [variant]="'primary'"
+      <app-button [isDisabled]="form.invalid" [fullWidth]="true" [loading]="loading()"
         >Sign In</app-button
       >
     </form>
   </div>
 </div>
-
 <!-- 
 <section style="display: flex; gap: 1rem; margin-bottom: 1rem">
   <div

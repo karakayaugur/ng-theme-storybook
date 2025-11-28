@@ -1,4 +1,11 @@
 /* Font Size */
-:where(html) {
+:root {
   --fs-base: 16px;
+
+  --bp-xsmobile: 480px;
+  --bp-mobile: 640px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1280px;
+  --bp-tv: 1536px;
 }

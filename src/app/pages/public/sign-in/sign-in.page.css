@@ -1,23 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
-  --clr-bg: var(--clr-surface-2);
+  --clr-background: var(--clr-surface-2);
   --border: none;
   --border-radius: 0;
   --box-shadow: none;
   --padding: 1rem;
   --box-shadow: none;
+  --widht: 100%;
 }
 
 .card {
-  background-color: var(--clr-bg);
+  background-color: var(--clr-background);
   border-radius: var(--border-radius);
   border: var(--border);
   box-shadow: var(--box-shadow);
   padding: var(--padding);
+  width: var(--widht);
 }
 
 @media (min-width: 768px) {
   .card {
-    max-width: 360px;
+    max-width: var(--bp-xsmobile);
     --border-radius: 1rem;
     --box-shadow: var(--shadow-2);
   }
