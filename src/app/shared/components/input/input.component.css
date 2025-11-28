@@ -10,7 +10,7 @@ label {
   color: var(--clr-neutral-500);
 }
 
-/* input {
+input {
   --height: 4rem;
   --radius: 0.5rem;
   --box-shadow: none;
@@ -41,9 +41,8 @@ input {
   width: 100%;
   font-family: var(--font-face) !important;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
-} */
-
-input {
+}
+*/ input {
   align-items: center;
   box-sizing: border-box;
   width: 100%;

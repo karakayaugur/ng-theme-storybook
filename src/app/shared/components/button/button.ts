@@ -29,7 +29,7 @@ export class ButtonComponent {
       this.variant,
       this.size,
       this.loading ? 'loading' : '',
-      this.fullWidth ? 'full-width' : '',
+      this.fullWidth ? 'w-full' : '',
     ];
     if (!this.class) return baseClasses;
     return Array.isArray(this.class)

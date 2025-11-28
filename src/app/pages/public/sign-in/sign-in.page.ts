@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, Signal, WritableSignal } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -16,6 +16,7 @@ import { SharedUi } from '@shared/shared-ui';
 })
 export class SignInPage {
   form!: FormGroup;
+  public loading: WritableSignal<boolean> = signal(false);
 
   constructor(private fb: FormBuilder) {}
 
@@ -26,5 +27,16 @@ export class SignInPage {
     });
   }
 
-  onSubmit(): void {}
+  onSubmit(): void {
+    this.loading.set(true);
+    // if (this.form.valid) {
+    //   const { email, password } = this.form.value;
+    //   setTimeout(() => {
+    //     console.log('User signed in with', { email, password });
+    //     this.loading.set(false);
+    //   }, 12000);
+    // } else {
+    //   this.loading.set(false);
+    // }
+  }
 }
