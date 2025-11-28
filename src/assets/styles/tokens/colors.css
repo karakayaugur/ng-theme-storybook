@@ -4,17 +4,19 @@
 }
 
 :root {
-  --clr-brand-050: #f6f2fe;
-  --clr-brand-100: #ece3fc;
-  --clr-brand-200: #e2d4fa;
-  --clr-brand-300: #d6c3f8;
-  --clr-brand-400: #b28df3;
-  --clr-brand-500: #9461ee;
-  --clr-brand-600: #7533e9;
-  --clr-brand-700: #5215bd;
-  --clr-brand-800: #300c6e;
-  --clr-brand-900: #21084b;
-  --clr-brand-950: #150531;
+  --clr-brand-025: hsl(225, 100%, 96%); /* #edf2ff */
+  --clr-brand-050: hsl(225, 100%, 93%); /* #dbe4ff */
+  --clr-brand-075: hsl(227, 100%, 87%); /* #bac8ff */
+  --clr-brand-100: hsl(226, 100%, 78%); /* #91a7ff */
+  --clr-brand-200: hsl(226, 95%, 74%); /* #748ffc */
+  --clr-brand-300: hsl(228, 94%, 67%); /* #5c7cfa */
+  --clr-brand-400: hsl(227, 91%, 63%); /* #4c6ef5 */
+  --clr-brand-500: hsl(228, 79%, 57%); /* #4263eb */
+  --clr-brand-600: hsl(230, 68%, 54%); /* #3b5bdb */
+  --clr-brand-700: hsl(230, 69%, 48%); /* #364fc7 */
+  --clr-brand-800: hsl(231, 63%, 42%); /* #2f44ad */
+  --clr-brand-900: hsl(232, 56%, 36%); /* #283a94 */
+  --clr-brand-950: hsl(232, 58%, 30%);
 
   --clr-neutral-050: hsl(210 17% 98%);
   --clr-neutral-100: hsl(210 17% 95%);
@@ -39,6 +41,10 @@
   --clr-stone-800: hsl(60 3% 22%);
   --clr-stone-900: hsl(60 6% 14%);
   --clr-stone-950: hsl(60 6% 7%);
+
+  --clr-surface-dark-700: hsl(213, 23%, 11%);
+  --clr-surface-dark-800: hsl(213, 26%, 7%);
+  --clr-surface-dark-900: hsl(0, 0%, 0%);
 
   --clr-destructive-050: hsl(0 100% 97%);
   --clr-destructive-100: hsl(0 58% 96%);

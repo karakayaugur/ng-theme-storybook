@@ -74,23 +74,23 @@ button.loading:hover {
 
 /* Primary */
 button.primary {
-  --clr-background: var(--clr-brand-600);
+  --clr-background: var(--clr-brand-400);
 }
 button.primary:hover {
-  --clr-background: var(--clr-brand-700);
+  --clr-background: var(--clr-brand-500);
 }
 
 button.primary:disabled {
-  --clr-background: var(--clr-brand-400);
+  --clr-background: var(--clr-brand-100);
   cursor: not-allowed;
 }
 
 button.primary:disabled:hover {
-  --clr-background: var(--clr-brand-400);
+  --clr-background: var(--clr-brand-100);
 }
 
 button.primary.loading:hover {
-  --clr-background: var(--clr-brand-600);
+  --clr-background: var(--clr-brand-400);
 }
 
 /* Destructive */

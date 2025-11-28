@@ -5,13 +5,14 @@
 }
 
 .card {
-  --clr-background: var(--clr-surface-2);
+  --clr-background: var(--clr-surface-1);
   --border: none;
   --border-radius: 0;
   --box-shadow: none;
   --padding: 1rem;
   --box-shadow: none;
   --widht: 100%;
+  --max-width: unset;
 }
 
 .card {
@@ -21,12 +22,14 @@
   box-shadow: var(--box-shadow);
   padding: var(--padding);
   width: var(--widht);
+  max-width: var(--max-width);
 }
 
 @media (min-width: 768px) {
   .card {
-    max-width: var(--bp-xsmobile);
+    --clr-background: var(--clr-surface-2);
+    --max-width: var(--bp-xsmobile);
     --border-radius: 1rem;
-    --box-shadow: var(--shadow-2);
+    --box-shadow: var(--shadow-1);
   }
 }

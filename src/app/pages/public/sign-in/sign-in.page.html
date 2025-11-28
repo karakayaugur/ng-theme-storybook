@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card">
-    <h4>Sign In Page to Admin UI</h4>
+    <h4>Sign in to WarmWarren</h4>
     <p>Welcome back! Please enter your details</p>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <app-input
@@ -17,7 +17,11 @@
         placeholder="Enter your password"
       ></app-input>
 
-      <app-button [isDisabled]="form.invalid" [fullWidth]="true" [loading]="loading()"
+      <app-button
+        [isDisabled]="form.invalid"
+        [fullWidth]="true"
+        [variant]="'primary'"
+        [loading]="loading()"
         >Sign In</app-button
       >
     </form>
