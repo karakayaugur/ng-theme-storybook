@@ -1,7 +1,13 @@
 <div class="container">
-  <div class="card">
+  <div class="card text-center">
+    <img
+      class="brand-img justify-self-center m-5"
+      style="height: 4rem"
+      src="assets/icons/brand-icon.svg"
+      alt="Logo"
+    />
     <h4>Sign in to WarmWarren</h4>
-    <p>Welcome back! Please enter your details</p>
+    <p class="mb-5">Welcome back! Please enter your details</p>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <app-input
         label="Email"
@@ -21,6 +27,7 @@
         [isDisabled]="form.invalid"
         [fullWidth]="true"
         [variant]="'primary'"
+        [size]="'large'"
         [loading]="loading()"
         >Sign In</app-button
       >

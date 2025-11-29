@@ -5,3 +5,15 @@
 .flex-place-center {
   place-content: center;
 }
+
+.justify-self-start {
+  justify-self: flex-start;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: flex-end;
+}

@@ -2,16 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
 .card {
   --clr-background: var(--clr-surface-1);
   --border: none;
   --border-radius: 0;
-  --box-shadow: none;
   --padding: 1rem;
-  --box-shadow: none;
-  --widht: 100%;
+  --width: 100%;
   --max-width: unset;
 }
 
@@ -19,10 +18,10 @@
   background-color: var(--clr-background);
   border-radius: var(--border-radius);
   border: var(--border);
-  box-shadow: var(--box-shadow);
   padding: var(--padding);
-  width: var(--widht);
+  width: var(--width);
   max-width: var(--max-width);
+  padding-block: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -30,6 +29,5 @@
     --clr-background: var(--clr-surface-2);
     --max-width: var(--bp-xsmobile);
     --border-radius: 1rem;
-    --box-shadow: var(--shadow-1);
   }
 }
