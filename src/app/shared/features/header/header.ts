@@ -5,6 +5,6 @@ import { ThemeToggleComponent } from '@shared/shared-ui';
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
-  imports: [NavigationComponent, ThemeToggleComponent],
+  imports: [ThemeToggleComponent],
 })
 export class HeaderComponent {}

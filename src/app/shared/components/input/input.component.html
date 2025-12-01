@@ -1,22 +1,18 @@
 <div class="form-field">
-  @if (label) {
-  <label for="{{ id }}"></label>
-  }
-
   <input
     [id]="id"
     [type]="type"
     [name]="ngControl.name"
     [value]="value"
-    [placeholder]="placeholder ? placeholder : ''"
     [disabled]="disabled"
     (input)="updateValue($event)"
     (blur)="onBlur()"
     (focus)="onFocus()"
     [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
   />
-
-  @if (control) {
-  <app-input-feedback [control]="control"></app-input-feedback>
-  }
+  <label for="{{ id }}">{{ label }}</label>
 </div>
+
+@if (control) {
+<app-input-feedback [control]="control"></app-input-feedback>
+}

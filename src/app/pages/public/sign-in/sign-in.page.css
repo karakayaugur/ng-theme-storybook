@@ -15,7 +15,7 @@
 }
 
 .card {
-  background-color: var(--clr-background);
+  /* background-color: var(--clr-background); */
   border-radius: var(--border-radius);
   border: var(--border);
   padding: var(--padding);

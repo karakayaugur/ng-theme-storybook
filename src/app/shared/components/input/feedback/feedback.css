@@ -1,22 +1,17 @@
 .feedback {
-  --min-height: 1.25rem;
-  --gap: 0.25rem;
   --font-weight: 400;
   --color: var(--clr-destructive-400);
   --font-size: calc(1rem * 0.75);
-  --margin-top: 0.25rem;
+  --margin-top: 0.125rem;
   --line-height: 20px;
 }
 
 .feedback {
-  gap: var(--gap);
+  display: flex;
+  align-items: center;
   font-weight: var(--font-weight);
   color: var(--color);
   font-size: var(--font-size);
   margin-top: var(--margin-top);
   line-height: var(--line-height);
-  min-height: var(--min-height);
-
-  display: flex;
-  align-items: center;
 }

@@ -1,16 +1,10 @@
 <div class="container">
   <div class="card text-center">
-    <img
-      class="brand-img justify-self-center m-5"
-      style="height: 4rem"
-      src="assets/icons/brand-icon.svg"
-      alt="Logo"
-    />
-    <h4>Sign in to WarmWarren</h4>
-    <p class="mb-5">Welcome back! Please enter your details</p>
+    <h3>Welcome to WarmWarren! 👋🏾 👋🏽 👋🏻</h3>
+    <p class="mb-5">Sign in or create a new account to continue</p>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <app-input
-        label="Email"
+        label="Enter your username or email"
         type="email"
         formControlName="email"
         placeholder="Enter your email"
