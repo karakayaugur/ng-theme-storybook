@@ -12,6 +12,7 @@
   --padding: 1rem;
   --width: 100%;
   --max-width: unset;
+  --box-shadow: none;
 }
 
 .card {
@@ -22,12 +23,15 @@
   width: var(--width);
   max-width: var(--max-width);
   padding-block: 2rem;
+  box-shadow: var(--box-shadow);
 }
 
 @media (min-width: 768px) {
   .card {
     --clr-background: var(--clr-surface-2);
     --max-width: var(--bp-xsmobile);
-    --border-radius: 1rem;
+    --border-radius: 2rem;
+    --box-shadow: 0 11px 34px 0 rgba(0, 0, 0, 0.65);
+    --box-shadow: 0 11px 34px 0 rgba(120, 120, 128, 0.16);
   }
 }

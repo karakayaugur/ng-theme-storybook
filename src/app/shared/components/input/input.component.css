@@ -12,13 +12,14 @@ input {
   --font-weight: 500;
   --line-height: 1.5;
   --clr-text: var(--clr-neutral-700);
-  --clr-background: var(--clr-neutral-100);
+  --clr-background: hsla(0, 0%, 100%, 0.8);
   --outline: none;
   --cursor: text;
   --padding: 0.5rem;
   --box-shadow: none;
   --transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  --border: 1px solid var(--clr-neutral-300);
+  --border: 1px solid #86868b;
+  --radius: 0.625rem;
 }
 
 input {
@@ -36,6 +37,7 @@ input {
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   border: var(--border);
+  border-radius: var(--radius);
 }
 
 /* label {
