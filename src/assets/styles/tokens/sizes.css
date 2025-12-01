@@ -1,11 +1,32 @@
 /* Font Size */
-:root {
-  --fs-base: 16px;
-
+:where(:root) {
   --bp-xsmobile: 480px;
   --bp-mobile: 640px;
   --bp-tablet: 768px;
   --bp-laptop: 1024px;
   --bp-desktop: 1280px;
   --bp-tv: 1536px;
+}
+
+:where(:root) {
+  --fs-0: 0.75rem;
+  --fs-1: 0.875rem;
+  --fs-2: 1rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.5rem;
+  --fs-5: 2rem;
+  --fs-6: 3rem;
+  --fs-7: 4rem;
+  --fs-base: var(--fs-2);
+}
+
+:where(:root) {
+  --space-0: 0;
+  --space-1: 0.125rem;
+  --space-2: 0.25rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
 }

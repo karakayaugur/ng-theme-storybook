@@ -1,0 +1,20 @@
+[color-scheme='dark'] {
+  color-scheme: dark;
+  --clr-surface-1: var(--clr-surface-dark-700);
+  --clr-surface-2: var(--clr-surface-dark-800);
+  --clr-surface-3: var(--clr-surface-dark-900);
+
+  --clr-text-1: var(--clr-text-1-dark);
+  --clr-text-2: var(--clr-text-2-dark);
+  --clr-text-3: var(--clr-text-3-dark);
+}
+
+[color-scheme='light'] {
+  --clr-surface-1: var(--clr-neutral-100);
+  --clr-surface-2: var(--clr-neutral-050);
+  --clr-surface-3: var(--clr-neutral-200);
+
+  --clr-text-1: var(--clr-neutral-950);
+  --clr-text-2: var(--clr-neutral-900);
+  --clr-text-3: var(--clr-neutral-800);
+}
