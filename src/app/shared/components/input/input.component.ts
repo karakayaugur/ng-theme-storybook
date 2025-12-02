@@ -12,10 +12,9 @@ import { FeedbackComponent } from './feedback/feedback';
 })
 export class InputComponent {
   @Input() type: string = 'text';
-  @Input() label?: string;
+  @Input() label?: string = 'input';
   @Input() icon?: string;
   @Input() tooltip?: string;
-  @Input() placeholder?: string;
   @Input() required: boolean = false;
   @Input() autocomplete: 'on' | 'off' = 'off';
   @Input() labelVariant?: string = '';

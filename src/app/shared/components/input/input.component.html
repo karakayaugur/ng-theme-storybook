@@ -1,5 +1,4 @@
 <div class="form-field">
-  <label for="{{ id }}">{{ label }}</label>
   <input
     [id]="id"
     [type]="type"
@@ -9,10 +8,12 @@
     (input)="updateValue($event)"
     (blur)="onBlur()"
     (focus)="onFocus()"
+    [placeholder]="' '"
     [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
   />
+  <label for="{{ id }}">{{ label }}</label>
 </div>
 
-@if (control) {
+<!-- @if (control) {
 <app-input-feedback [control]="control"></app-input-feedback>
-}
+} -->
