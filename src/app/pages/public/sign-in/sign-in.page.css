@@ -31,7 +31,5 @@
     --clr-background: var(--clr-surface-2);
     --max-width: var(--bp-xsmobile);
     --border-radius: 2rem;
-    --box-shadow: 0 11px 34px 0 rgba(0, 0, 0, 0.65);
-    --box-shadow: 0 11px 34px 0 rgba(120, 120, 128, 0.16);
   }
 }

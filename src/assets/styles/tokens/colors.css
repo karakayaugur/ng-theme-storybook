@@ -18,7 +18,6 @@
   --clr-blue-900: hsl(232, 56%, 36%);
   --clr-blue-950: hsl(232, 58%, 30%);
 
-  --clr-gray-050: hsl(0, 0%, 100%);
   --clr-gray-100: hsl(0, 0%, 95%);
   --clr-gray-200: hsl(0, 0%, 90%);
   --clr-gray-300: hsl(0, 0%, 80%);
@@ -59,8 +58,8 @@
   --clr-surface-dark-1: hsl(0, 0%, 10%);
   --clr-surface-dark-2: hsl(0, 0%, 16%);
 
-  --clr-surface-light-1: hsl(220, 75%, 98%);
-  --clr-surface-light-2: var(--clr-white);
+  --clr-surface-light-1: var(--clr-white);
+  --clr-surface-light-2: var(--clr-gray-100);
 }
 
 /* Theming styles */
