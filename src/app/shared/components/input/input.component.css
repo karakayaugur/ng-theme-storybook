@@ -1,109 +1,106 @@
-:where(input) {
-  --clr-input-background: hsla(0, 0%, 100%, 0.08);
-  --clr-outline: var(--clr-primary-100);
-  --clr-outline-offset: var(--clr-primary-050);
+input,
+label {
+  --line-height: 1;
+  font-family: var(--font-face);
 }
 
-.form-field {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 1rem;
+:host-context([color-scheme='light']) input {
+  --clr-background: hsla(0, 0%, 100%, 0.2);
+  --border: 1px solid rgba(31, 34, 41, 0.1);
+  --color: var(--clr-text-1);
+  --clr-background-invalid: var(--clr-destructive-050);
+  --clr-border-invalid: var(--clr-destructive-400);
+}
+
+:host-context([color-scheme='light']) input + label {
+  --color: var(--clr-gray-700);
+}
+
+:host-context([color-scheme='dark']) input {
+  --clr-background: hsla(0, 0%, 100%, 0.1);
+  --border: 1px solid hsla(0, 0%, 100%, 0.2);
+  --color: var(--clr-white);
+  --clr-background-invalid: hsla(359, 71%, 26%, 0.2);
+  --clr-border-invalid: var(--clr-destructive-400);
+}
+
+:host-context([color-scheme='dark']) input + label {
+  --color: var(--clr-gray-300);
 }
 
 input {
   --width: 100%;
   --height: 3rem;
   --font-size: 1rem;
-  --font-weight: 500;
-  --line-height: 1.5;
-  --clr-text: var(--clr-text-2);
-  --clr-background: var(--clr-input-background);
+  --padding: 0.75rem;
+  --font-weight: 600;
   --outline: none;
-  --cursor: text;
-  --padding: 0.5rem;
+  --border-radius: 0.625rem;
   --box-shadow: none;
-  --transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  --border: 1px solid #86868b;
-  --radius: 0.625rem;
 }
 
 input {
-  position: var(--position);
   width: var(--width);
   height: var(--height);
   font-size: var(--font-size);
+  padding: var(--padding);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
-  color: var(--clr-text);
   background-color: var(--clr-background);
   outline: var(--outline);
-  cursor: var(--cursor);
-  padding: var(--padding);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  border-radius: var(--border-radius);
   border: var(--border);
-  border-radius: var(--radius);
+  color: var(--color);
+  box-shadow: var(--box-shadow);
 }
 
-input.small {
-  --font-size: 0.875rem;
-  --height: 2.75rem;
-  --padding: 0.5rem 1rem;
+input:focus,
+input:not(:placeholder-shown) {
+  padding-top: calc(0.375rem + 0.75rem + 0.5rem);
 }
 
-input.medium {
-  --font-size: 1rem;
-  --height: 3rem;
-  --padding: 0.75rem 1.5rem;
+input:focus:not(.invalid) {
+  --border: 1px solid var(--clr-primary-400);
 }
 
-input.large {
-  --font-size: 1rem;
-  --height: 3.25rem;
-  --padding: 1rem 2rem;
-}
-
-input {
-  width: 100%;
-  padding: 14px 12px 12px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  background: var(--bg);
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.18s, box-shadow 0.18s;
-}
-input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(76, 110, 245, 0.08);
+input:focus.invalid,
+input.invalid:not(:placeholder-shown) {
+  --clr-background: var(--clr-background-invalid);
+  --border: 1px solid var(--clr-border-invalid);
 }
 
 label {
+  line-height: var(--line-height);
+  color: var(--color);
+  font-weight: var(--font-weight);
   position: absolute;
-  left: 12px;
-  top: 14px;
-  padding: 0 4px;
-  background: transparent;
-  color: var(--muted);
-  font-size: 14px;
+  left: 0.75rem;
+  top: calc(1rem + 2px);
+  font-size: 0.875rem;
   pointer-events: none;
-  transform-origin: left top;
   transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.18s, font-size 0.18s,
     color 0.18s;
 }
 
 input:focus + label,
 input:not(:placeholder-shown) + label {
-  top: 2px;
-  transform: translateY(0) scale(0.86);
+  top: 0.375rem;
+  left: 0.75rem;
+  transform: translateY(0);
   font-size: 12px;
-  color: var(--accent);
-  background: var(--bg);
 }
 
-.hint {
-  font-size: 12px;
-  color: #9ca3af;
-  margin-top: 6px;
+/* input.small {
+  --height: 2.75rem;
+  --font-size: 0.875rem;
 }
+
+input.medium {
+  --height: 2.75rem;
+  --font-size: 0.875rem;
+}
+
+input.large {
+  --height: 3.25rem;
+  --font-size: 1rem;
+} */

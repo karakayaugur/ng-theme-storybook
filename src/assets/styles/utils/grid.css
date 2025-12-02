@@ -1,19 +1,35 @@
-.flex {
+.d-flex {
   display: flex;
 }
 
-.flex-place-center {
-  place-content: center;
+.flex-column {
+  flex-direction: column;
 }
 
-.justify-self-start {
-  justify-self: flex-start;
+.justify-center {
+  justify-items: center;
 }
 
-.justify-self-center {
-  justify-self: center;
+.justify-start {
+  justify-items: start;
 }
 
-.justify-self-end {
-  justify-self: flex-end;
+.justify-end {
+  justify-items: end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }

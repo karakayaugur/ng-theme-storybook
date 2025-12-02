@@ -47,7 +47,6 @@
   margin-bottom: var(--space-5);
 }
 
-/* Margin Inline Start (Left in LTR) */
 .ms-0 {
   margin-inline-start: var(--space-0);
 }
@@ -67,7 +66,6 @@
   margin-inline-start: var(--space-5);
 }
 
-/* Margin Inline End (Right in LTR) */
 .me-0 {
   margin-inline-end: var(--space-0);
 }
@@ -87,7 +85,6 @@
   margin-inline-end: var(--space-5);
 }
 
-/* Margin All Sides */
 .m-0 {
   margin: var(--space-0);
 }
@@ -107,7 +104,6 @@
   margin: var(--space-5);
 }
 
-/* Margin Vertical (Top + Bottom) */
 .my-0 {
   margin-top: var(--space-0);
   margin-bottom: var(--space-0);
@@ -133,7 +129,6 @@
   margin-bottom: var(--space-5);
 }
 
-/* Margin Horizontal (Start + End) */
 .mx-0 {
   margin-inline-start: var(--space-0);
   margin-inline-end: var(--space-0);
@@ -159,7 +154,6 @@
   margin-inline-end: var(--space-5);
 }
 
-/* Padding Top */
 .pt-0 {
   padding-top: var(--space-0);
 }
@@ -313,4 +307,8 @@
 
 .text-center {
   text-align: center;
+}
+
+.position-relative {
+  position: relative;
 }

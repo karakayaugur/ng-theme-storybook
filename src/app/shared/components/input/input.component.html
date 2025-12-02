@@ -1,4 +1,4 @@
-<div class="form-field">
+<div class="d-flex mb-3 position-relative">
   <input
     [id]="id"
     [type]="type"
@@ -8,7 +8,7 @@
     (input)="updateValue($event)"
     (blur)="onBlur()"
     (focus)="onFocus()"
-    [placeholder]="' '"
+    [placeholder]="''"
     [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
   />
   <label for="{{ id }}">{{ label }}</label>

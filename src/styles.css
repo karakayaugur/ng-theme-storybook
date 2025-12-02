@@ -9,7 +9,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   font-size: var(--fs-base);
-  color: var(--clr-text-1);
+  color: var(--clr-text-2);
   font-family: var(--font-face);
   background-color: var(--clr-surface-1);
   transition: background-color 0.25s var(--ease-3);
