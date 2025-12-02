@@ -6,6 +6,8 @@
   --max-width: unset;
   --box-shadow: none;
   --max-width: 320px;
+  --padding-inline: var(--space-4);
+  --padding-block: var(--space-6);
 }
 
 .box {
@@ -18,12 +20,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-inline: var(--space-4);
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .box {
-    --max-width: var(--bp-xsmobile);
+    --max-width: var(--bp-mobile-small);
     --border-radius: 2rem;
+    --clr-background: var(--clr-surface-2);
   }
-} */
+}
