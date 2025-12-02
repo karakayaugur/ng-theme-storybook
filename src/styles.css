@@ -13,6 +13,7 @@ body {
   font-family: var(--font-face);
   background-color: var(--clr-surface-1);
   transition: background-color 0.25s var(--ease-3);
+  z-index: 0;
 }
 p {
   color: var(--clr-text-2);

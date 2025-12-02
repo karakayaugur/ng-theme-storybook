@@ -1,6 +1,5 @@
 /* Font Size */
 :where(:root) {
-  --bp-xsmobile: 480px;
   --bp-mobile: 640px;
   --bp-tablet: 768px;
   --bp-laptop: 1024px;

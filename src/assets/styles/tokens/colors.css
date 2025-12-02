@@ -4,20 +4,6 @@
 }
 
 :root {
-  --clr-blue-025: hsl(225, 100%, 96%);
-  --clr-blue-050: hsl(225, 100%, 93%);
-  --clr-blue-075: hsl(227, 100%, 87%);
-  --clr-blue-100: hsl(226, 100%, 78%);
-  --clr-blue-200: hsl(226, 95%, 74%);
-  --clr-blue-300: hsl(228, 94%, 67%);
-  --clr-blue-400: hsl(227, 91%, 63%);
-  --clr-blue-500: hsl(228, 79%, 57%);
-  --clr-blue-600: hsl(230, 68%, 54%);
-  --clr-blue-700: hsl(230, 69%, 48%);
-  --clr-blue-800: hsl(231, 63%, 42%);
-  --clr-blue-900: hsl(232, 56%, 36%);
-  --clr-blue-950: hsl(232, 58%, 30%);
-
   --clr-gray-100: hsl(0, 0%, 95%);
   --clr-gray-200: hsl(0, 0%, 90%);
   --clr-gray-300: hsl(0, 0%, 80%);

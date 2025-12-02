@@ -7,11 +7,11 @@
 
 input {
   --width: 100%;
-  --height: 3.25rem;
+  --height: 3rem;
   --font-size: 1rem;
   --font-weight: 500;
   --line-height: 1.5;
-  --clr-text: var(--clr-neutral-700);
+  --clr-text: var(--clr-text-2);
   --clr-background: hsla(0, 0%, 100%, 0.8);
   --outline: none;
   --cursor: text;
