@@ -9,7 +9,7 @@
       (input)="updateValue($event)"
       (blur)="onBlur()"
       (focus)="onFocus()"
-      [placeholder]="''"
+      placeholder=" "
       [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
     />
     <label for="{{ id }}">{{ label }}</label>

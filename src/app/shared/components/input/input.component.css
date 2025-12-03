@@ -16,7 +16,7 @@ label {
   --clr-border-invalid: var(--clr-destructive-500);
 }
 
-:host-context([color-scheme='light']) input + label {
+:host-context([color-scheme='light']) label {
   --color: var(--clr-gray-700);
 }
 
@@ -28,7 +28,7 @@ label {
   --clr-border-invalid: var(--clr-destructive-500);
 }
 
-:host-context([color-scheme='dark']) input + label {
+:host-context([color-scheme='dark']) label {
   --color: var(--clr-gray-300);
 }
 
