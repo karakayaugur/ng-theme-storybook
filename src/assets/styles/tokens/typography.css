@@ -85,12 +85,13 @@ h6 {
   font-weight: var(--font-weight);
   margin: var(--margin);
   font-family: var(--font-family);
+  color: var(--clr-text-1);
 }
 
 p {
   --font-size: 1rem;
-  --font-weight: 400;
-  --line-height: 1.4;
+  --font-weight: 500;
+  --line-height: 1.5;
   --margin: 0 0 1rem 0;
 }
 
@@ -99,5 +100,4 @@ p {
   line-height: var(--line-height);
   font-weight: var(--font-weight);
   margin: var(--margin);
-  font-family: var(--font-family);
 }

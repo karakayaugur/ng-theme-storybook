@@ -5,7 +5,7 @@
   --width: 100%;
   --max-width: unset;
   --box-shadow: none;
-  --max-width: 320px;
+  --max-width: 360px;
   --padding-inline: var(--space-4);
   --padding-block: var(--space-6);
 }
@@ -16,7 +16,6 @@
   border: var(--border);
   width: var(--width);
   max-width: var(--max-width);
-  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -26,8 +25,15 @@
 
 @media (min-width: 768px) {
   .box {
-    --max-width: var(--bp-mobile-small);
-    --border-radius: 2rem;
-    --clr-background: var(--clr-surface-2);
+    --max-width: calc(var(--bp-mobile-small) - 84px);
   }
+}
+
+:host {
+  display: block;
+  margin: var(--app-input-margin);
+}
+
+app-input {
+  margin-bottom: var(--space-4);
 }

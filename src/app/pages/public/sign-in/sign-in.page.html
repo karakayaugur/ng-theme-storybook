@@ -1,6 +1,6 @@
 <div class="box">
-  <h3>Sign in</h3>
-  <p>to continue to your account</p>
+  <h1>Sign in</h1>
+  <p>to continue to your Warm Warren</p>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-input
       label="Enter your username or email"
@@ -13,7 +13,6 @@
     <app-button
       [isDisabled]="form.invalid"
       [fullWidth]="true"
-      [size]="'large'"
       [loading]="loading()"
       [variant]="'primary'"
       >Sign In</app-button

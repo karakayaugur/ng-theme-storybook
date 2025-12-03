@@ -55,13 +55,13 @@
   --clr-surface-2: var(--clr-surface-dark-2);
 
   --clr-text-1: var(--clr-white);
-  --clr-text-2: var(--clr-gray-200);
+  --clr-text-2: var(--clr-gray-500);
 }
 
 :where(html)[color-scheme='light']:root {
   --clr-surface-1: var(--clr-surface-light-1);
   --clr-surface-2: var(--clr-surface-light-2);
 
-  --clr-text-1: hsla(254, 12%, 41%);
-  --clr-text-2: var(--clr-gray-900);
+  --clr-text-1: hsla(220, 12%, 14%, 1);
+  --clr-text-2: hsla(254, 12%, 30%, 2);
 }

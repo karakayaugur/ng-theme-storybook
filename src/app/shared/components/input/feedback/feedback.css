@@ -1,9 +1,10 @@
 .feedback {
   --font-weight: 400;
-  --color: var(--clr-destructive-400);
+  --color: var(--clr-destructive-500);
   --font-size: calc(1rem * 0.75);
   --margin-top: 0.125rem;
   --line-height: 20px;
+  --padding-left: 0.25rem;
 }
 
 .feedback {
@@ -14,4 +15,5 @@
   font-size: var(--font-size);
   margin-top: var(--margin-top);
   line-height: var(--line-height);
+  padding-left: var(--padding-left);
 }

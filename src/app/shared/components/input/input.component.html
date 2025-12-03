@@ -1,19 +1,21 @@
-<div class="d-flex mb-3 position-relative">
-  <input
-    [id]="id"
-    [type]="type"
-    [name]="ngControl.name"
-    [value]="value"
-    [disabled]="disabled"
-    (input)="updateValue($event)"
-    (blur)="onBlur()"
-    (focus)="onFocus()"
-    [placeholder]="''"
-    [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
-  />
-  <label for="{{ id }}">{{ label }}</label>
-</div>
+<div>
+  <div class="d-flex position-relative">
+    <input
+      [id]="id"
+      [type]="type"
+      [name]="ngControl.name"
+      [value]="value"
+      [disabled]="disabled"
+      (input)="updateValue($event)"
+      (blur)="onBlur()"
+      (focus)="onFocus()"
+      [placeholder]="''"
+      [class.invalid]="control?.invalid && (control?.dirty || control?.touched)"
+    />
+    <label for="{{ id }}">{{ label }}</label>
+  </div>
 
-<!-- @if (control) {
-<app-input-feedback [control]="control"></app-input-feedback>
-} -->
+  @if (control) {
+  <app-input-feedback [control]="control"></app-input-feedback>
+  }
+</div>
