@@ -1,4 +1,4 @@
-import { Component, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, inject, signal, Signal, WritableSignal } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -6,6 +6,7 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { AuthService } from '@app/core/api/auth.service';
 import { SharedUi } from '@shared/shared-ui';
 
 @Component({
@@ -15,6 +16,8 @@ import { SharedUi } from '@shared/shared-ui';
   styleUrls: ['./sign-in.page.css'],
 })
 export class SignInPage {
+  private readonly authService = inject(AuthService);
+
   form!: FormGroup;
   public loading: WritableSignal<boolean> = signal(false);
 
@@ -29,6 +32,16 @@ export class SignInPage {
 
   onSubmit(): void {
     this.loading.set(true);
+    this.authService.hello().subscribe({
+      next: (response) => {
+        console.log('Response from hello:', response);
+        this.loading.set(false);
+      },
+      error: (error) => {
+        console.error('Error from hello:', error);
+        this.loading.set(false);
+      },
+    });
     // if (this.form.valid) {
     //   const { email, password } = this.form.value;
     //   setTimeout(() => {
