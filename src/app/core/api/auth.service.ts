@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  hello(): Observable<{ message: string }> {
-    return this.http.get<{ message: string }>(`${this.baseUrl}/hello`);
+  signIn(payload: { email: string; password: string }): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.baseUrl}/sign-in`, payload);
   }
 }

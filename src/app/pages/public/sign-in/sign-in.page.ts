@@ -32,24 +32,13 @@ export class SignInPage {
 
   onSubmit(): void {
     this.loading.set(true);
-    this.authService.hello().subscribe({
-      next: (response) => {
-        console.log('Response from hello:', response);
-        this.loading.set(false);
+    this.authService.signIn(this.form.value).subscribe({
+      next: (res) => {
+        console.log('Login success:', res);
       },
-      error: (error) => {
-        console.error('Error from hello:', error);
-        this.loading.set(false);
+      error: (err) => {
+        console.error(err);
       },
     });
-    // if (this.form.valid) {
-    //   const { email, password } = this.form.value;
-    //   setTimeout(() => {
-    //     console.log('User signed in with', { email, password });
-    //     this.loading.set(false);
-    //   }, 12000);
-    // } else {
-    //   this.loading.set(false);
-    // }
   }
 }
