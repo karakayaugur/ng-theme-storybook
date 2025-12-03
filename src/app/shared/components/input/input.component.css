@@ -10,7 +10,7 @@ label {
 
 :host-context([color-scheme='light']) input {
   --clr-background: hsla(0, 0%, 100%, 0.2);
-  --border: 1px solid rgba(31, 34, 41, 0.1);
+  --border: 1px solid #e7eeec;
   --color: var(--clr-text-1);
   --clr-background-invalid: var(--clr-destructive-050);
   --clr-border-invalid: var(--clr-destructive-500);
