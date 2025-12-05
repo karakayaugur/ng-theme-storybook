@@ -8,10 +8,11 @@ import {
 } from '@angular/forms';
 import { AuthService } from '@app/core/api/auth.service';
 import { SharedUi } from '@shared/shared-ui';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in',
-  imports: [SharedUi, ReactiveFormsModule],
+  imports: [SharedUi, ReactiveFormsModule, NgOptimizedImage],
   templateUrl: './sign-in.page.html',
   styleUrls: ['./sign-in.page.css'],
 })
