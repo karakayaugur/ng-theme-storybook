@@ -1,6 +1,7 @@
 :root {
   --clr-black: hsl(0 0% 0%);
   --clr-white: hsl(0 0% 100%);
+  --clr-swiss-white: hsl(0 8% 97%); /* #fefefe */
 }
 
 :root {
@@ -14,6 +15,17 @@
   --clr-gray-800: hsl(0, 0%, 25%);
   --clr-gray-900: hsl(0, 0%, 12%);
   --clr-gray-950: hsl(0, 0%, 7%);
+
+  /* --clr-gray-100: hsl(244 4% 96%);
+  --clr-gray-200: hsl(247 5% 93%);
+  --clr-gray-300: hsl(250 6% 87%);
+  --clr-gray-400: hsl(252 9% 71%);
+  --clr-gray-500: hsl(255 11% 55%);
+  --clr-gray-600: hsl(253 12% 45%);
+  --clr-gray-700: hsl(254 13% 37%);
+  --clr-gray-800: hsl(252 12% 28%);
+  --clr-gray-900: hsl(255 14% 21%);
+  --clr-gray-950: hsl(253 12% 13%); */
 
   --clr-primary-025: hsl(225, 100%, 96%);
   --clr-primary-050: hsl(225, 100%, 93%);
@@ -54,7 +66,7 @@
   --clr-surface-1: var(--clr-surface-dark-1);
   --clr-surface-2: var(--clr-surface-dark-2);
 
-  --clr-text-1: var(--clr-white);
+  --clr-text-1: var(--clr-swiss-white);
   --clr-text-2: var(--clr-gray-500);
 }
 

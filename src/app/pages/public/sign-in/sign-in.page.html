@@ -1,14 +1,16 @@
 <div class="box">
-  <img
-    style="margin: 3rem auto"
-    ngSrc="assets/images/brand-logo.svg"
-    alt="brand logo"
-    priority
-    width="96"
-    height="96"
-  />
+  <div class="shiny-img">
+    <img
+      style="margin: 3rem auto"
+      ngSrc="assets/images/brand-logo.svg"
+      alt="brand logo"
+      priority
+      width="96"
+      height="96"
+    />
+  </div>
   <h1>Sign in</h1>
-  <p>to continue to your Warm Warren</p>
+  <p class="shiny-text">to continue to your Warm Warren</p>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <app-input
       label="Enter your username or email"
