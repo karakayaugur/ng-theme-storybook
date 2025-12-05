@@ -21,8 +21,6 @@ export const handler = async (event) => {
     const db = client.db('warmwarren');
     const users = db.collection('users');
 
-    console.log(`Attempting sign in for email: ${email}`);
-
     const user = await users.findOne({ email });
 
     if (!user) return { statusCode: 401, body: JSON.stringify({ error: 'Invalid sign in info.' }) };
@@ -32,7 +30,13 @@ export const handler = async (event) => {
       return { statusCode: 401, body: JSON.stringify({ error: 'Invalid sign in info.' }) };
 
     const token = jwt.sign(
-      { userId: user._id.toString(), email: user.email, role: user.role, tenantId: user.tenantId },
+      {
+        id: user._id.toString(),
+        email: user.email,
+        role: user.role,
+        tenantId: user.tenantId,
+        name: user.name,
+      },
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
@@ -40,9 +44,8 @@ export const handler = async (event) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Login successful',
+        message: 'successful',
         token,
-        user: { email: user.email, name: user.name, role: user.role, tenantId: user.tenantId },
       }),
     };
   } catch (err) {

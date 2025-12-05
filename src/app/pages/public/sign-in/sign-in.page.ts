@@ -6,7 +6,7 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { AuthService } from '@app/core/api/auth.service';
+import { UserService } from '@app/core/api/user.service';
 import { SharedUi } from '@shared/shared-ui';
 import { NgOptimizedImage } from '@angular/common';
 
@@ -17,7 +17,7 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrls: ['./sign-in.page.css'],
 })
 export class SignInPage {
-  private readonly authService = inject(AuthService);
+  private readonly userService = inject(UserService);
 
   form!: FormGroup;
   public loading: WritableSignal<boolean> = signal(false);
@@ -33,12 +33,15 @@ export class SignInPage {
 
   onSubmit(): void {
     this.loading.set(true);
-    this.authService.signIn(this.form.value).subscribe({
+    this.userService.signIn(this.form.value).subscribe({
       next: (res) => {
-        localStorage.setItem('authToken', res.token);
+        console.log('Signed in successfully', res);
       },
       error: (err) => {
         console.error(err);
+      },
+      complete: () => {
+        this.loading.set(false);
       },
     });
   }
