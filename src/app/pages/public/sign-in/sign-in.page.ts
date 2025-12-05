@@ -35,7 +35,7 @@ export class SignInPage {
     this.loading.set(true);
     this.authService.signIn(this.form.value).subscribe({
       next: (res) => {
-        console.log('Login success:', res);
+        localStorage.setItem('authToken', res.token);
       },
       error: (err) => {
         console.error(err);
