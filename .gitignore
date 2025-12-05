@@ -48,3 +48,4 @@ storybook-static
 # Local Netlify folder
 .netlify
 .env
+seed-db.js

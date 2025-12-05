@@ -18,10 +18,13 @@ export const handler = async (event) => {
 
   try {
     await client.connect();
-    const db = client.db('myAppDB');
+    const db = client.db('warmwarren');
     const users = db.collection('users');
 
+    console.log(`Attempting sign in for email: ${email}`);
+
     const user = await users.findOne({ email });
+
     if (!user) return { statusCode: 401, body: JSON.stringify({ error: 'Invalid sign in info.' }) };
 
     const validPassword = await bcrypt.compare(password, user.passwordHash);
