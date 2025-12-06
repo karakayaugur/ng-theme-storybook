@@ -1,0 +1,16 @@
+<nav aria-label="side bar navigation">
+  <ul>
+    @for (item of menuItems; track item.url ?? $index) {
+    <li>
+      <a
+        [routerLink]="[item.url]"
+        routerLinkActive="active"
+        [attr.aria-current]="rla.isActive ? 'page' : null"
+        #rla="routerLinkActive"
+      >
+        {{ item.label | capitalize }}
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

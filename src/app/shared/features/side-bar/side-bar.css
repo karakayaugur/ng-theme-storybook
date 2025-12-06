@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a.active {
+  border-bottom: 1.5px solid var(--clr-destructive-700);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
