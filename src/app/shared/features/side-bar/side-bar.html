@@ -5,6 +5,7 @@
       <a
         [routerLink]="[item.url]"
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
         [attr.aria-current]="rla.isActive ? 'page' : null"
         #rla="routerLinkActive"
       >

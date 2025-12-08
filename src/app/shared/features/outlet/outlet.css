@@ -1,0 +1,11 @@
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.brand-img {
+  width: 30px;
+}
