@@ -1,7 +1,13 @@
 nav {
+  --clr-bg: #1e1f20;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+nav {
   display: flex;
   flex: 1;
   justify-content: center;
+  background-color: var(--clr-bg);
 }
 
 ul {

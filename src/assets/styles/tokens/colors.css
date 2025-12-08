@@ -68,6 +68,8 @@
 
   --clr-text-1: var(--clr-swiss-white);
   --clr-text-2: var(--clr-gray-500);
+
+  --clr-icon: var(--clr-gray-400);
 }
 
 :where(html)[color-scheme='light']:root {
@@ -76,4 +78,6 @@
 
   --clr-text-1: hsla(220, 12%, 14%, 1);
   --clr-text-2: hsla(254, 12%, 30%, 2);
+
+  --clr-icon: var(--clr-gray-400);
 }

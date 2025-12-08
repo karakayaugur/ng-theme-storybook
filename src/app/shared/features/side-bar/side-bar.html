@@ -9,6 +9,7 @@
         [attr.aria-current]="rla.isActive ? 'page' : null"
         #rla="routerLinkActive"
       >
+        <app-icon name="settings" [type]="'outlined'" [fill]="1"></app-icon>
         {{ item.label | capitalize }}
       </a>
     </li>
