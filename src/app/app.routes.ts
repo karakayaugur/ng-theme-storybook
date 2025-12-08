@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Settings } from './pages/settings/settings';
 import { Profile } from './pages/settings/profile/profile';
 import { SignIn } from './pages/public/sign-in/sign-in';
+import { Users } from './pages/settings/users/users';
 
 export const routes: Routes = [
   {
@@ -47,6 +48,10 @@ export const routes: Routes = [
       {
         path: 'profile',
         component: Profile,
+      },
+      {
+        path: 'users',
+        component: Users,
       },
     ],
   },

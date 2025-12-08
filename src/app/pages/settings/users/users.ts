@@ -3,7 +3,7 @@ import { SharedUi } from '@shared/shared-ui';
 
 @Component({
   imports: [SharedUi],
-  templateUrl: './profile.html',
-  styleUrls: ['./profile.css'],
+  templateUrl: './users.html',
+  styleUrls: ['./users.css'],
 })
-export class Profile {}
+export class Users {}
