@@ -4,7 +4,7 @@ import { SharedUi } from '@shared/shared-ui';
 @Component({
   selector: 'app-profile',
   imports: [SharedUi],
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.css'],
+  templateUrl: './profile.html',
+  styleUrls: ['./profile.css'],
 })
-export class ProfilePage {}
+export class Profile {}

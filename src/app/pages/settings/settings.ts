@@ -5,7 +5,7 @@ import { SharedUi } from '@shared/shared-ui';
 @Component({
   selector: 'app-settings',
   imports: [SharedUi, RouterOutlet],
-  templateUrl: './settings.page.html',
-  styleUrls: ['./settings.page.css'],
+  templateUrl: './settings.html',
+  styleUrls: ['./settings.css'],
 })
-export class SettingsPage {}
+export class Settings {}

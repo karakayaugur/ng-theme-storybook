@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { SettingsPage } from './pages/settings/settings.page';
-import { ProfilePage } from './pages/settings/profile/profile.page';
-import { SignInPage } from './pages/public/sign-in/sign-in.page';
+import { Settings } from './pages/settings/settings';
+import { Profile } from './pages/settings/profile/profile';
+import { SignIn } from './pages/public/sign-in/sign-in';
 
 export const routes: Routes = [
   {
@@ -9,18 +9,35 @@ export const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'sign-in',
   },
-  {
-    path: 'dashboard',
-    loadComponent: () => import('./pages/dashboard/dashboard.page').then((m) => m.DashboardPage),
-  },
+
   {
     path: 'sign-in',
-    component: SignInPage,
+    component: SignIn,
+  },
+
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./pages/dashboard/dashboard').then((m) => m.Dashboard),
+  },
+
+  {
+    path: 'products',
+    loadComponent: () => import('./pages/products/products').then((m) => m.Products),
+  },
+
+  {
+    path: 'orders',
+    loadComponent: () => import('./pages/orders/orders').then((m) => m.Orders),
+  },
+
+  {
+    path: 'customers',
+    loadComponent: () => import('./pages/customers/customers').then((m) => m.Customers),
   },
 
   {
     path: 'settings',
-    loadComponent: () => import('./pages/settings/settings.page').then((m) => m.SettingsPage),
+    loadComponent: () => import('./pages/settings/settings').then((m) => m.Settings),
     children: [
       {
         path: '',
@@ -29,14 +46,13 @@ export const routes: Routes = [
       },
       {
         path: 'profile',
-        component: ProfilePage,
+        component: Profile,
       },
     ],
   },
 
   {
     path: '**',
-    loadComponent: () =>
-      import('./pages/public/not-found/not-found.page').then((m) => m.NotFoundPage),
+    loadComponent: () => import('./pages/public/not-found/not-found').then((m) => m.NotFound),
   },
 ];

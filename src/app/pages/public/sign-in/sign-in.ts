@@ -13,10 +13,10 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-sign-in',
   imports: [SharedUi, ReactiveFormsModule, NgOptimizedImage],
-  templateUrl: './sign-in.page.html',
-  styleUrls: ['./sign-in.page.css'],
+  templateUrl: './sign-in.html',
+  styleUrls: ['./sign-in.css'],
 })
-export class SignInPage {
+export class SignIn {
   private readonly userService = inject(UserService);
 
   form!: FormGroup;
