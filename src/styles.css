@@ -1,7 +1,8 @@
 @import url('./assets/styles/index.css');
 
 html,
-body {
+body,
+app-root {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
@@ -13,11 +14,4 @@ body {
   font-family: var(--font-face);
   background-color: var(--clr-surface-1);
   z-index: 0;
-}
-
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 100vw;
 }

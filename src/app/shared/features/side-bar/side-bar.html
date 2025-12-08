@@ -1,18 +1,32 @@
-<nav aria-label="side bar navigation">
-  <ul>
-    @for (item of menuItems; track item.url ?? $index) {
-    <li>
-      <a
-        [routerLink]="[item.url]"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        [attr.aria-current]="rla.isActive ? 'page' : null"
-        #rla="routerLinkActive"
-      >
-        <app-icon name="settings" [type]="'outlined'" [fill]="1"></app-icon>
-        {{ item.label | capitalize }}
-      </a>
-    </li>
-    }
-  </ul>
-</nav>
+<div class="sidebar">
+  <img
+    class="brand-img"
+    width="70px"
+    style="margin: 0 auto"
+    src="assets/icons/brand-logo.svg"
+    alt="Logo"
+  />
+  <nav aria-label="side bar navigation">
+    <ul>
+      @for (item of menuItems; track item.url ?? $index) {
+      <li>
+        <a
+          [routerLink]="[item.url]"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [attr.aria-current]="rla.isActive ? 'page' : null"
+          #rla="routerLinkActive"
+        >
+          <app-icon [size]="36" name="{{ item.icon }}"></app-icon>
+          <span>
+            {{ item.label | capitalize }}
+          </span>
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+  <div class="theming">
+    <app-theme-toggle></app-theme-toggle>
+  </div>
+</div>

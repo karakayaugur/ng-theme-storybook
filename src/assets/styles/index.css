@@ -5,6 +5,8 @@
 @import url('./tokens/sizes.css');
 @import url('./tokens/typography.css');
 @import url('./tokens/animation.css');
-@import url('./layout.css');
 
 @import url('./utils/helper.css');
+@import url('./utils/grid.css');
+
+@import url('./layout.css');

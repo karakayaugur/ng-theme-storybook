@@ -1,11 +1,12 @@
-header {
+/* header {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding-inline: 1rem;
 }
 
 .brand-img {
-  width: 30px;
-}
+  width: 60px;
+} */

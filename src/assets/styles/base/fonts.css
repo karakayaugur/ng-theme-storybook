@@ -8,3 +8,28 @@
 :where(html) {
   --font-face: 'Manrope', sans-serif;
 }
+
+/* Variable icon font */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700; /* variable range */
+  src: url('../../fonts/Material-symbols/MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].ttf')
+    format('truetype');
+}
+
+.mat-icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: inline-block;
+  font-variation-settings: 'FILL' var(--ms-fill, 0), 'wght' var(--ms-wght, 300),
+    'GRAD' var(--ms-grad, 0), 'opsz' var(--ms-opsz, 24);
+  color: #092339;
+}
+
+.mat-icon:hover {
+  fill: true;
+}

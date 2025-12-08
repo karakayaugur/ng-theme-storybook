@@ -53,7 +53,7 @@
   --clr-destructive-900: hsl(359 74% 19%);
   --clr-destructive-950: hsl(359 77% 13%);
 
-  --clr-surface-dark-1: hsl(0, 0%, 10%);
+  --clr-surface-dark-1: hsl(0, 0%, 8%);
   --clr-surface-dark-2: hsl(0, 0%, 16%);
 
   --clr-surface-light-1: var(--clr-white);

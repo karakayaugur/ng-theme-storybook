@@ -1,8 +1,8 @@
 import { Menu } from './side-bar.type';
 
 export const MENU_ITEMS: Menu[] = [
-  { url: '/orders', label: 'Orders' },
-  { url: '/products', label: 'Products' },
-  { url: '/customers', label: 'Customers' },
-  { url: '/settings', label: 'Settings' },
+  { url: '/orders', label: 'Orders', icon: 'shopping_cart' },
+  { url: '/products', label: 'Products', icon: 'inventory' },
+  { url: '/customers', label: 'Customers', icon: 'people' },
+  { url: '/settings', label: 'Settings', icon: 'settings' },
 ];

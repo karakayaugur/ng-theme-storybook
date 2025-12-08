@@ -1,32 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-icon',
+  template: `{{ name }}`,
   standalone: true,
-  styleUrls: ['./icon.css'],
-  template: `
-    <span
-      class="Material Symbols Outlined"
-      [class.material-outlined]="type === 'outlined'"
-      [style.fontSize.px]="size"
-      [style.fontVariationSettings]="variationSettings"
-    >
-      {{ name }}
-    </span>
-  `,
 })
 export class IconComponent {
-  @Input() name = '';
-  @Input() size = 24;
-  @Input() type: 'outlined' | 'rounded' | 'sharp' = 'outlined';
+  @Input() name!: string;
 
-  // Opsiyonel: fill/wght opsiyonları
-  @Input() fill = 0;
-  @Input() wght = 400;
-  @Input() grad = 0;
-  @Input() opsz = 24;
+  @Input() size: number = 24;
 
-  get variationSettings() {
-    return `'FILL' ${this.fill}, 'wght' ${this.wght}, 'GRAD' ${this.grad}, 'opsz' ${this.opsz}`;
+  @Input() fill: 0 | 1 = 0;
+  @Input() weight: number = 200;
+  @Input() grade: number = 0;
+  @Input() opticalSize: number = 24;
+
+  @HostBinding('style.font-variation-settings') get variation() {
+    return `"FILL" ${this.fill}, "wght" ${this.weight}, "GRAD" ${this.grade}, "opsz" ${this.opticalSize}`;
   }
+
+  @HostBinding('style.font-size.px') get fontSize() {
+    return this.size;
+  }
+
+  @HostBinding('class.mat-icon') materialSymbolsClass = true;
 }
