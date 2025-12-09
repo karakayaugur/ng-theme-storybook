@@ -6,6 +6,7 @@
   --bp-laptop: 1024px;
   --bp-desktop: 1280px;
   --bp-tv: 1536px;
+  --side-bar-width: 15rem;
 }
 
 :where(:root) {

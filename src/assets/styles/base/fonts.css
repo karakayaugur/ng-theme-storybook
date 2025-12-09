@@ -27,7 +27,6 @@
   display: inline-block;
   font-variation-settings: 'FILL' var(--ms-fill, 0), 'wght' var(--ms-wght, 300),
     'GRAD' var(--ms-grad, 0), 'opsz' var(--ms-opsz, 24);
-  color: #092339;
 }
 
 .mat-icon:hover {

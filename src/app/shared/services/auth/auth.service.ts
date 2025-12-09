@@ -24,6 +24,7 @@ export class AuthService {
 
   public set auth(value: Auth) {
     this.authStore.setState(value);
+    debugger;
     this.router.navigate(['/dashboard']);
   }
 

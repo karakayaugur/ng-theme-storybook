@@ -15,10 +15,18 @@
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
-/* 
+/* nav {
+  flex-grow: 1;
+} */
+.theming {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -47,4 +55,4 @@ a.active {
 a:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-} */
+}

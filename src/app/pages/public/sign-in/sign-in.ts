@@ -9,6 +9,7 @@ import {
 import { UserService } from '@app/core/api/user.service';
 import { SharedUi } from '@shared/shared-ui';
 import { NgOptimizedImage } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -18,6 +19,7 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class SignIn {
   private readonly userService = inject(UserService);
+  private readonly router = inject(Router);
 
   form!: FormGroup;
   public loading: WritableSignal<boolean> = signal(false);
@@ -33,16 +35,18 @@ export class SignIn {
 
   onSubmit(): void {
     this.loading.set(true);
-    this.userService.signIn(this.form.value).subscribe({
-      next: (res) => {
-        console.log('Signed in successfully', res);
-      },
-      error: (err) => {
-        console.error(err);
-      },
-      complete: () => {
-        this.loading.set(false);
-      },
-    });
+    this.router.navigate(['/dashboard']);
+
+    // this.userService.signIn(this.form.value).subscribe({
+    //   next: (res) => {
+    //     console.log('Signed in successfully', res);
+    //   },
+    //   error: (err) => {
+    //     console.error(err);
+    //   },
+    //   complete: () => {
+    //     this.loading.set(false);
+    //   },
+    // });
   }
 }

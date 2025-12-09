@@ -4,3 +4,10 @@
   background: none;
   position: static;
 } */
+
+.app-main {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: var(--side-bar-width) 1fr;
+  grid-template-areas: 'app-side-bar main';
+}
