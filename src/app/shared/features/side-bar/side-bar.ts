@@ -1,15 +1,16 @@
-import { Component, effect } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MENU_ITEMS } from './side-bar.constants';
+import { Component, inject } from '@angular/core';
 import { SharedPipes } from '@shared/shared-pipe';
-import { IconComponent, ThemeToggleComponent } from '@shared/shared-ui';
+import { ThemeToggleComponent } from '@shared/shared-ui';
+import { SidebarService } from '@shared/services/sidebar/sidebar.service';
+import { NavigationMenuComponent } from '@app/shared/features/navigation/navigation-menu';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.html',
   styleUrls: ['./side-bar.css'],
-  imports: [...SharedPipes, RouterLinkActive, RouterLink, IconComponent, ThemeToggleComponent],
+  imports: [...SharedPipes, ThemeToggleComponent, CommonModule, NavigationMenuComponent],
   standalone: true,
 })
 export class SideBarComponent {
-  public readonly menuItems = MENU_ITEMS;
+  sidebarService = inject(SidebarService);
 }

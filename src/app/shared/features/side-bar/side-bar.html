@@ -1,23 +1,6 @@
-<div class="sidebar">
-  <nav aria-label="side bar navigation">
-    <ul>
-      @for (item of menuItems; track item.url ?? $index) {
-      <li>
-        <a
-          [routerLink]="[item.url]"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          [attr.aria-current]="rla.isActive ? 'page' : null"
-          #rla="routerLinkActive"
-        >
-          <app-icon [size]="36" name="{{ item.icon }}"></app-icon>
-          <span>
-            {{ item.label | capitalize }}
-          </span>
-        </a>
-      </li>
-      }
-    </ul>
-    <app-theme-toggle></app-theme-toggle>
+<aside [ngClass]="sidebarService.state()">
+  <nav style="flex-grow: 1">
+    <app-navigation-menu></app-navigation-menu>
   </nav>
-</div>
+  <app-theme-toggle></app-theme-toggle>
+</aside>

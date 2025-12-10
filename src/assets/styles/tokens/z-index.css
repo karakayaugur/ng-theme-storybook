@@ -1,0 +1,8 @@
+:where(:root) {
+  --z-index-base: 0;
+  --z-index-header: 10;
+  --z-index-aside: 20;
+  --z-index-modal-backdrop: 100;
+  --z-index-modal: 110;
+  --z-index-toast: 120;
+}

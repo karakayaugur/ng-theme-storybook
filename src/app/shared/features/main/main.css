@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  z-index: 0;
+  transition: all 0.3s ease;
+  width: calc(100% - var(--sidebar-expanded-size));
+  margin-left: var(--sidebar-expanded-size);
+}
+
+main.collapsed {
+  width: calc(100% - var(--sidebar-collapsed-size));
+  margin-left: var(--sidebar-collapsed-size);
+}
+main.expanded {
+  width: calc(100% - var(--sidebar-expanded-size));
+  margin-left: var(--sidebar-expanded-size);
+}
+main.hidden {
+  width: 100%;
+  margin-left: 0;
+}

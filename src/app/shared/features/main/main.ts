@@ -1,17 +1,15 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SideBarComponent } from '@shared/features/side-bar/side-bar';
 import { SidebarService } from '@shared/services';
-import { MainComponent } from '@shared/features/main/main';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-main-layout',
-  templateUrl: './main-layout.html',
-  styleUrls: ['./main-layout.css'],
-  imports: [CommonModule, MainComponent, SideBarComponent],
+  selector: 'app-main',
+  templateUrl: './main.html',
+  styleUrls: ['./main.css'],
+  imports: [RouterOutlet, CommonModule],
 })
-export class MainLayoutComponent implements OnInit {
+export class MainComponent implements OnInit {
   sidebarService = inject(SidebarService);
   ngOnInit(): void {
     window.addEventListener('resize', () => {
